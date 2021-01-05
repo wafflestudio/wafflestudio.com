@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const TitleContainer = styled.section`
   display: flex;
@@ -49,7 +51,7 @@ const Title = styled.section`
 
 const ContentContainer = styled.section`
   width: 780px;
-  margin: 300px auto;
+  margin: 200px auto;
 
   hr {
     border: 6px solid #f8f5f1;
@@ -57,6 +59,8 @@ const ContentContainer = styled.section`
 `
 
 const Content = styled.article`
+  margin: 100px 0 100px;
+
   h1 {
     line-height: 28.8px;
     font-weight: 700;
@@ -69,17 +73,44 @@ const Content = styled.article`
     font-size: 20px;
     color: #666665;
   }
+`
 
-  div {
-    display: flex;
+const Description = styled.div`
+  display: flex;
+  margin-top: 30px;
+
+  .text {
+    width: 254px;
+    height: 192px;
+
+    margin: 31px 40px 0 13px;
+    
+    &.left {
+      text-align: right;
+    }
 
     span {
       color: ${({ color }) => color};
     }
 
     h2 {
+      margin: 20px 0;
       font-size: 16px;
       line-height: 19.2px;
+    }
+
+    button {
+      width: 254px;
+      height: 56px;
+      background: ${({ color }) => color};
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      border-color: transparent;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 52px;
+      text-align: center;
+      color: #fffefc;
     }
   }
 `
@@ -111,25 +142,8 @@ const Contact = () => {
           <h2>
             서울대학교 301동 314호 내부에 위치한 와플스튜디오 동아리방 입니다.
           </h2>
-          <div>
-            <h1>
-              <span>동아리방</span>으로
-              <br />
-              찾아오세요
-            </h1>
-            <h2>
-              컴퓨터공학부 과방 모퉁이에
-              <br />
-              동아리방이 있습니다.
-            </h2>
-          </div>
-        </Content>
-        <hr />
-        <Content color={'#3578EA'}>
-          <h1>와플스튜디오 페이스북</h1>
-          <h2>와플스튜디오의 새소식이 올라오는 페이스북입니다</h2>
-          <div>
-            <>
+          <Description color={'#ED8573'}>
+            <div className="text left">
               <h1>
                 <span>동아리방</span>으로
                 <br />
@@ -140,8 +154,35 @@ const Contact = () => {
                 <br />
                 동아리방이 있습니다.
               </h2>
-            </>
-          </div>
+              <Link href={'https://www.naver.com'} passHref>
+                <button>지도 바로가기</button>
+              </Link>
+            </div>
+            <Image src="/images/map.png" alt="Map" width="447" height="259" />
+          </Description>
+        </Content>
+        <hr />
+        <Content color={'#3578EA'}>
+          <h1>와플스튜디오 페이스북</h1>
+          <h2>와플스튜디오의 새소식이 올라오는 페이스북입니다</h2>
+          <Description color={'#3578EA'}>
+            <Image src="/images/facebook.png" alt="Map" width="447" height="259" />
+            <div className="text right">
+              <h1>
+                <span>페이스북</span>을
+                <br />
+                팔로우 하세요
+              </h1>
+              <h2>
+                와플스튜디오의 새 소식을
+                <br />
+                빠르게 만날 수 있습니다.
+              </h2>
+              <Link href={'https://www.naver.com'} passHref>
+                <button>페이지 바로가기</button>
+              </Link>
+            </div>
+          </Description>
         </Content>
       </ContentContainer>
     </>
