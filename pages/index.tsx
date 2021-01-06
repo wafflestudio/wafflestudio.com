@@ -1,19 +1,30 @@
-import { useState } from "react";
+import styled from 'styled-components'
+import Intro from '../components/home/Intro/Intro'
+import SectionDivider from '../components/SectionDivider'
+import Activities from '../components/home/Activities/Activities'
+import Services from '../components/home/Services/Services'
+import Members from '../components/home/Members/Members'
+
+const HomeWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const Home = () => {
-  const [text, setText] = useState<string>("자바스크립트");
-
-  setTimeout(() => {
-    setText("타입스크립트")
-  }, 1000)
-
   return (
-    <div className="container">
-      <div>
-        <span>{text} 적용 완료</span>
-      </div>
-    </div>
-  );
+    <HomeWrapper>
+      <Intro />
+      <SectionDivider />
+      <Services />
+      <SectionDivider />
+      <Activities />
+      <SectionDivider />
+      <Members />
+    </HomeWrapper>
+  )
 }
 
-export default Home;
+export default Home
