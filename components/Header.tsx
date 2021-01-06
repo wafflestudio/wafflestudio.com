@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styled from 'styled-components'
 import { Colors } from '../util/constant'
 
@@ -25,6 +26,7 @@ const MenuItem = styled.div`
   color: ${Colors.textLight};
 
   &:hover {
+    cursor: pointer;
     color: ${Colors.wafflePrimary};
   }
 `
@@ -34,9 +36,15 @@ const Header = () => {
     <HeaderContainer>
       <Image src='/images/icon_header.svg' alt='me' width='118' height='48' />
       <MenuContainer>
-        <MenuItem>소개</MenuItem>
-        <MenuItem>멤버</MenuItem>
-        <MenuItem>연락처</MenuItem>
+        <Link href='/'>
+          <MenuItem>소개</MenuItem>
+        </Link>
+        <Link href='/people'>
+          <MenuItem>멤버</MenuItem>
+        </Link>
+        <Link href='/contact'>
+          <MenuItem>연락처</MenuItem>
+        </Link>
       </MenuContainer>
     </HeaderContainer>
   )
