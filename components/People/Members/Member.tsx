@@ -3,12 +3,13 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 const Box = styled.article`
-position: relative;
+  position: relative;
   width: 200px;
   height: 270px;
   border-radius: 12px;
   background-color: #f8f5f1;
   overflow: auto;
+  margin: 8px 6px;
 `
 
 const Description = styled.div`

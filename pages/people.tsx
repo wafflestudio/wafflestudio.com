@@ -1,9 +1,10 @@
-import { Intro } from 'components/People'
+import { Intro, Members } from 'components/People'
 
 const People = () => {
   return (
     <>
       <Intro />
+      <Members />
     </>
   )
 }
