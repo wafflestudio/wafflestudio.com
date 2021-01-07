@@ -8,8 +8,9 @@ import Footer from '../components/Footer'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+
   body {
-    font-family: SpoqaHanSansNeo;
+    font-family: Spoqa Han Sans Neo;
     background: ${Colors.backLight};
   }
 `
@@ -19,7 +20,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link
-          href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css'
+          href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css'
           rel='stylesheet'
           type='text/css'
         />
