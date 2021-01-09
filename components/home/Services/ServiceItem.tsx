@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Colors } from 'util/constant'
-import { DownloadLink } from 'components/Common'
+import DownloadLink from 'components/Common/DownloadLink'
 
 const Wrapper = styled.div<{ back: String }>`
   display: flex;

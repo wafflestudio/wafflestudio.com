@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SectionDivider } from 'components/Common'
+import SectionDivider from 'components/Common/SectionDivider'
 import { Activities, Intro, Members, Services } from 'components/Home'
 
 const HomeWrapper = styled.div`

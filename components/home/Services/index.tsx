@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SectionTitle } from 'components/Common'
+import SectionTitle from 'components/Common/SectionTitle'
 import dynamic from 'next/dynamic'
 
 const Wrapper = styled.div`

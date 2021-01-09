@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SectionDivider } from 'components/Common'
+import SectionDivider from 'components/Common/SectionDivider'
 
 const TitleContainer = styled.section`
   display: flex;
