@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SectionTitle } from 'components/Common'
+// import { SectionTitle } from 'components/Common'
 import ActivityCard from './ActivityCard'
 
 const Wrapper = styled.div`
@@ -41,10 +41,10 @@ const Activities = () => {
   ]
   return (
     <Wrapper>
-      <SectionTitle
+      {/* <SectionTitle
         title="진행 중인 활동"
         subTitle="와플스튜디오에서 정기적으로 진행하는 활동입니다"
-      />
+      /> */}
       <CardGrid>
         {items.map((item) => (
           <ActivityCard

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors } from '../../../util/constant'
+import { Colors } from 'util/constant'
 
 interface ActivityCardProps {
   title: String;
