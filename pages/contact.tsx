@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import SectionDivider from '../components/common/SectionDivider'
+import { SectionDivider } from 'components/Common'
 
 const TitleContainer = styled.section`
   display: flex;
@@ -23,7 +23,8 @@ const TitleContainer = styled.section`
       transform: translateY(0%);
     }
   }
-  @-moz-keyframes fadein { /* Firefox */
+  @-moz-keyframes fadein {
+    /* Firefox */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -33,7 +34,8 @@ const TitleContainer = styled.section`
       transform: translateY(0%);
     }
   }
-  @-webkit-keyframes fadein { /* Safari and Chrome */
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -43,7 +45,8 @@ const TitleContainer = styled.section`
       transform: translateY(0%);
     }
   }
-  @-o-keyframes fadein { /* Opera */
+  @-o-keyframes fadein {
+    /* Opera */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -163,18 +166,18 @@ const Contact = () => {
     <>
       <TitleContainer>
         <Address>
-          <p className='left'>MASTER@WAFFLESTUDIO.COM</p>
-          <p className='left'>RECRUIT@WAFFLESTUDIO.COM</p>
-          <p className='left'>WWW.WAFFLESTUDIO.COM</p>
-          <p className='right'>MASTER@WAFFLESTUDIO.COM</p>
-          <p className='right'>RECRUIT@WAFFLESTUDIO.COM</p>
-          <p className='right'>WWW.WAFFLESTUDIO.COM</p>
+          <p className="left">MASTER@WAFFLESTUDIO.COM</p>
+          <p className="left">RECRUIT@WAFFLESTUDIO.COM</p>
+          <p className="left">WWW.WAFFLESTUDIO.COM</p>
+          <p className="right">MASTER@WAFFLESTUDIO.COM</p>
+          <p className="right">RECRUIT@WAFFLESTUDIO.COM</p>
+          <p className="right">WWW.WAFFLESTUDIO.COM</p>
         </Address>
         <Title>
           <h1>
             와플스튜디오에
             <br />
-            <span className='text-orange'>연락</span>하세요
+            <span className="text-orange">연락</span>하세요
           </h1>
           <h2>와플스튜디오와 함께하실 분들을 찾습니다.</h2>
         </Title>
@@ -186,7 +189,7 @@ const Contact = () => {
             서울대학교 301동 314호 내부에 위치한 와플스튜디오 동아리방 입니다.
           </h2>
           <Description color={'#ED8573'}>
-            <div className='text left'>
+            <div className="text left">
               <h1>
                 <span>동아리방</span>으로
                 <br />
@@ -201,7 +204,7 @@ const Contact = () => {
                 <button>지도 바로가기</button>
               </Link>
             </div>
-            <Image src='/images/map.png' alt='Map' width='447' height='259' />
+            <Image src="/images/map.png" alt="Map" width="447" height="259" />
           </Description>
         </Content>
         <SectionDivider />
@@ -209,8 +212,13 @@ const Contact = () => {
           <h1>와플스튜디오 페이스북</h1>
           <h2>와플스튜디오의 새소식이 올라오는 페이스북입니다</h2>
           <Description color={'#3578EA'}>
-            <Image src='/images/facebook.png' alt='Map' width='447' height='259' />
-            <div className='text right'>
+            <Image
+              src="/images/facebook.png"
+              alt="Map"
+              width="447"
+              height="259"
+            />
+            <div className="text right">
               <h1>
                 <span>페이스북</span>을
                 <br />

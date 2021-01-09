@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Colors } from '../../../util/constant'
-import DownloadLink from '../../common/DownloadLink'
+import { Colors } from 'util/constant'
+import { DownloadLink } from 'components/Common'
 
 const Wrapper = styled.div<{ back: String }>`
   display: flex;
@@ -29,35 +29,40 @@ const TextPanel = styled.div`
 
   h1 {
     font-size: 40px;
-    color: ${Colors.backLight}
+    color: ${Colors.backLight};
   }
 
   h2 {
     margin-right: 150px;
     font-size: 20px;
-    color: ${Colors.backLight}
+    color: ${Colors.backLight};
   }
 
   h3 {
     margin-right: 150px;
     margin-top: 90px;
     font-size: 16px;
-    color: ${Colors.backLight}
+    color: ${Colors.backLight};
   }
 `
 
 interface ServiceItemProps {
-  backgroundImage: string,
-  title: string,
-  subtitle: string,
+  backgroundImage: string
+  title: string
+  subtitle: string
   description: string
 }
 
-const ServiceItem = ({ backgroundImage, title, subtitle, description }: ServiceItemProps) => {
+const ServiceItem = ({
+  backgroundImage,
+  title,
+  subtitle,
+  description,
+}: ServiceItemProps) => {
   return (
     <Wrapper back={backgroundImage}>
       <ImagePanel>
-        <Image src='/images/siksha_mock.png' width='180px' height='360px' />
+        <Image src="/images/siksha_mock.png" width="180px" height="360px" />
       </ImagePanel>
       <TextPanel>
         <h1>{title}</h1>

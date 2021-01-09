@@ -1,11 +1,9 @@
 import { AppProps } from 'next/app'
 import reset from 'styled-reset'
-import Header from '../components/Header'
 import Head from 'next/head'
 import { createGlobalStyle } from 'styled-components'
-import { Colors } from '../util/constant'
-import Footer from '../components/Footer'
-import { useEffect } from 'react'
+import { Colors } from 'util/constant'
+import { Header, Footer } from 'components'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

@@ -1,5 +1,5 @@
-import { Colors } from '../../util/constant'
 import styled from 'styled-components'
+import { Colors } from 'util/constant'
 
 
 const TitleText = styled.div`

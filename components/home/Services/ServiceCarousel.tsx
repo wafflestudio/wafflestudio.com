@@ -5,13 +5,21 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const CarouselWrapper = styled.div`
   width: 780px;
-  .carousel .slide { background: none; }
+  .carousel .slide {
+    background: none;
+  }
 `
 
 const ServiceCarousel = () => {
   return (
     <CarouselWrapper>
-      <Carousel showStatus={false} autoPlay infiniteLoop swipeable>
+      <Carousel
+        showStatus={false}
+        showThumbs={false}
+        autoPlay
+        infiniteLoop
+        swipeable
+      >
         <ServiceItem
           backgroundImage={'/images/siksha_back.png'}
           title={'식샤'}

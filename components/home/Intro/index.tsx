@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Colors } from '../../../util/constant'
+import { Colors } from 'util/constant'
 
 const Wrapper = styled.div`
   margin-top: 160px;
