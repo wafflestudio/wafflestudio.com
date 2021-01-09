@@ -1,9 +1,6 @@
 import styled from 'styled-components'
-import Intro from '../components/home/Intro/Intro'
-import SectionDivider from '../components/common/SectionDivider'
-import Activities from '../components/home/Activities/Activities'
-import Services from '../components/home/Services/Services'
-import Members from '../components/home/Members/Members'
+import SectionDivider from 'components/Common/SectionDivider'
+import { Activities, Intro, Members, Services } from 'components/Home'
 
 const HomeWrapper = styled.div`
   display: flex;
