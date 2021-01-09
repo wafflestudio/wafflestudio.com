@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { createGlobalStyle } from 'styled-components'
 import { Colors } from '../util/constant'
 import Footer from '../components/Footer'
+import { useEffect } from 'react'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

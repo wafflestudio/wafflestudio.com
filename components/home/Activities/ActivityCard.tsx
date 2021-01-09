@@ -11,6 +11,20 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  h2 {
+    margin-top: 16px;
+    text-align: left;
+    font-size: 20px;
+    color: ${Colors.textDark}
+  }
+
+  h3 {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 16px;
+    color: ${Colors.textLight}
+  }
 `
 
 const CardImage = styled.div`
@@ -20,26 +34,12 @@ const CardImage = styled.div`
   background: ${Colors.backDark};
 `
 
-const CardTitle = styled.div`
-  margin-top: 16px;
-  text-align: left;
-  font-size: 20px;
-  color: ${Colors.textDark}
-`
-
-const CardDescription = styled.div`
-  margin-top: 10px;
-  text-align: left;
-  font-size: 16px;
-  color: ${Colors.textLight}
-`
-
 const ActivityCard = (props: ActivityCardProps) => {
   return (
     <CardWrapper>
       <CardImage />
-      <CardTitle>{props.title}</CardTitle>
-      <CardDescription>{props.description}</CardDescription>
+      <h2>{props.title}</h2>
+      <h3>{props.description}</h3>
     </CardWrapper>
   )
 

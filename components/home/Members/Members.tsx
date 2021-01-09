@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import SectionTitle from '../../SectionTitle'
+import SectionTitle from '../../common/SectionTitle'
 
 const Wrapper = styled.div`
   display: flex;

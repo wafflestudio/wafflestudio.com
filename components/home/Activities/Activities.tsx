@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import SectionTitle from '../../SectionTitle'
+import SectionTitle from '../../common/SectionTitle'
 import ActivityCard from './ActivityCard'
 
 const Wrapper = styled.div`
@@ -29,7 +29,7 @@ const Activities = () => {
       <CardGrid>
         {
           items.map(item =>
-            <ActivityCard title={item.title} description={item.description} />,
+            <ActivityCard key={item.title} title={item.title} description={item.description} />,
           )
         }
       </CardGrid>

@@ -9,6 +9,53 @@ const Box = styled.section`
   .title {
     margin-top: 122px;
   }
+
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-moz-keyframes fadein { /* Firefox */
+    from {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-o-keyframes fadein { /* Opera */
+    from {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
 `
 
 const Title = styled.h1`
@@ -30,14 +77,14 @@ const SubTitle = styled.h2`
 
 const Intro = () => (
   <Box>
-    <div className="title">
+    <div className='title'>
       <Title color={'#F0975E'}>
         와플스튜디오의 <br />
         <span>멤버</span>를 소개합니다.
       </Title>
       <SubTitle>와플스튜디오와 함께하는 사람들</SubTitle>
     </div>
-    <Image src="/images/people.svg" width='368' height='337' />
+    <Image src='/images/people.svg' width='368' height='337' />
   </Box>
 )
 

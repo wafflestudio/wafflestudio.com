@@ -9,16 +9,20 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   padding: 15px 30px;
   justify-content: space-between;
+  
+  img:hover {
+    cursor: pointer;
+  }
 `
 
 const MenuContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 40px;
 `
 
 const MenuItem = styled.div`
   display: flex;
+  margin-left: 40px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -34,7 +38,9 @@ const MenuItem = styled.div`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Image src='/images/icon_header.svg' alt='me' width='118' height='48' />
+      <Link href='/'>
+        <Image src='/images/icon_header.svg' alt='me' width='118' height='48' />
+      </Link>
       <MenuContainer>
         <Link href='/'>
           <MenuItem>소개</MenuItem>

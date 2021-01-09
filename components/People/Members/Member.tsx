@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Box = styled.article`
   position: relative;
-  width: 200px;
+  width: 100%;
   height: 270px;
   border-radius: 12px;
   background-color: #f8f5f1;
@@ -73,23 +73,23 @@ const Member = ({ name, githubId, position, introduction, links }: Props) => {
       </Description>
       <Links>
         {instagram && (
-          <LinkItem href={instagram}>
-            <Image src="/images/instagram.svg" width="24" height="24" />
+          <LinkItem href={instagram} target='_blank'>
+            <Image src='/images/instagram.svg' width='24' height='24' />
           </LinkItem>
         )}
         {facebook && (
-          <LinkItem href={facebook}>
-            <Image src="/images/facebook.svg" width="24" height="24" />
+          <LinkItem href={facebook} target='_blank'>
+            <Image src='/images/facebook.svg' width='24' height='24' />
           </LinkItem>
         )}
         {web && (
-          <LinkItem href={web}>
-            <Image src="/images/web.svg" width="24" height="24" />
+          <LinkItem href={web} target='_blank'>
+            <Image src='/images/web.svg' width='24' height='24' />
           </LinkItem>
         )}
         {github && (
-          <LinkItem href={instagram}>
-            <Image src="/images/github.svg" width="24" height="24" />
+          <LinkItem href={github} target='_blank'>
+            <Image src='/images/github.svg' width='24' height='24' />
           </LinkItem>
         )}
       </Links>

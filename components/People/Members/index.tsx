@@ -2,8 +2,8 @@ import Member from './Member'
 import styled from 'styled-components'
 
 const Box = styled.section`
-  margin: 84px auto;
-  width: 762px;
+  width: 780px;
+  margin: 100px auto;
 `
 
 const Title = styled.h1`
@@ -21,10 +21,11 @@ const SubTitle = styled.h2`
 `
 
 const MembersWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
   width: 100%;
-  margin: 59px 0;
-  flex-wrap: wrap;
+  margin: 30px 0;
 `
 
 const Members = () => (
@@ -44,43 +45,43 @@ const Members = () => (
           instagram: 'https://www.naver.com',
         }}
       />
-      <Member 
-      name={"김상민"}
-      githubId={"sanggggg"}
-      position={"Android Developer"}
-      introduction={"사람에 대한 소개"}
-      links={{
-        github: "https://www.naver.com",
-        facebook: "https://www.naver.com",
-        web: "https://www.naver.com",
-        instagram: "https://www.naver.com"
-      }}
+      <Member
+        name={'김상민'}
+        githubId={'sanggggg'}
+        position={'Android Developer'}
+        introduction={'사람에 대한 소개'}
+        links={{
+          github: 'https://www.naver.com',
+          facebook: 'https://www.naver.com',
+          web: 'https://www.naver.com',
+          instagram: 'https://www.naver.com',
+        }}
 
       />
-      <Member 
-      name={"김상민"}
-      githubId={"sanggggg"}
-      position={"Android Developer"}
-      introduction={"사람에 대한 소개"}
-      links={{
-        github: "https://www.naver.com",
-        facebook: "https://www.naver.com",
-        web: "https://www.naver.com",
-        instagram: "https://www.naver.com"
-      }}
+      <Member
+        name={'김상민'}
+        githubId={'sanggggg'}
+        position={'Android Developer'}
+        introduction={'사람에 대한 소개'}
+        links={{
+          github: 'https://www.naver.com',
+          facebook: 'https://www.naver.com',
+          web: 'https://www.naver.com',
+          instagram: 'https://www.naver.com',
+        }}
 
       />
-      <Member 
-      name={"김상민"}
-      githubId={"sanggggg"}
-      position={"Android Developer"}
-      introduction={"사람에 대한 소개"}
-      links={{
-        github: "https://www.naver.com",
-        facebook: "https://www.naver.com",
-        web: "https://www.naver.com",
-        instagram: "https://www.naver.com"
-      }}
+      <Member
+        name={'김상민'}
+        githubId={'sanggggg'}
+        position={'Android Developer'}
+        introduction={'사람에 대한 소개'}
+        links={{
+          github: 'https://www.naver.com',
+          facebook: 'https://www.naver.com',
+          web: 'https://www.naver.com',
+          instagram: 'https://www.naver.com',
+        }}
 
       />
     </MembersWrapper>

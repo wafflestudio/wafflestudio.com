@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import SectionTitle from '../../SectionTitle'
-import ServiceItem from './ServiceItem'
+import SectionTitle from '../../common/SectionTitle'
+import dynamic from 'next/dynamic'
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,12 +9,14 @@ const Wrapper = styled.div`
   width: 780px;
 `
 
+const DynamicCarousel = dynamic(() => import('./ServiceCarousel'))
+
 
 const Services = () => {
   return (
     <Wrapper>
       <SectionTitle title='서비스' subTitle='와플스튜디오에서 제공하는 서비스를 만나보세요.' />
-      <ServiceItem />
+      <DynamicCarousel />
     </Wrapper>
   )
 
