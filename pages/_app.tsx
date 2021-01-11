@@ -8,6 +8,10 @@ import { Header, Footer } from 'components'
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: Spoqa Han Sans Neo;
     background: ${Colors.backLight};
