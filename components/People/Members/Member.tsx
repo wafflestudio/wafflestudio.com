@@ -8,7 +8,7 @@ const Box = styled.article`
   border-radius: 12px;
   background-color: #f8f5f1;
   overflow: auto;
-  margin: 8px 6px;
+  //margin: 8px 6px;
 `
 
 const Description = styled.div`

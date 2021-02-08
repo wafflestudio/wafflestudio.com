@@ -56,6 +56,15 @@ const Box = styled.section`
     }
   }
 
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    width: 90vw;
+    align-items: center;
+    .title {
+      margin-top: 40px;
+    }
+  }
+
 `
 
 const Title = styled.h1`
@@ -66,6 +75,11 @@ const Title = styled.h1`
   span {
     color: ${({ color }) => color};
   }
+
+  @media (max-width: 768px) {
+    font-size: 70px;
+    line-height: 80px;
+  }
 `
 
 const SubTitle = styled.h2`
@@ -73,6 +87,11 @@ const SubTitle = styled.h2`
   font-size: 20px;
   line-height: 24px;
   color: #666665;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `
 
 const Intro = () => (

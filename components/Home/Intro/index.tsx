@@ -88,7 +88,7 @@ const IntroText3 = styled.div`
 
 const HighlightText = styled.div`
   font-weight: bold;
-  color: ${Colors.wafflePrimary}
+  color: ${Colors.wafflePrimary};
 `
 
 const Intro = () => {

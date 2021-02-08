@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 780px;
+
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `
 
 const CardGrid = styled.div`
@@ -14,6 +18,13 @@ const CardGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: 90%;
+    row-gap: 100px;
+    margin: 30px auto;
+  }
 `
 
 const Activities = () => {
@@ -39,12 +50,13 @@ const Activities = () => {
         '와플 스튜디오에서는 매 주 코딩 모임을 통해 와플 스튜디오 내부 개발자 간의 커뮤니티를 형성합니다.',
     },
   ]
+
   return (
     <Wrapper>
-      {/* <SectionTitle
+      <SectionTitle
         title="진행 중인 활동"
         subTitle="와플스튜디오에서 정기적으로 진행하는 활동입니다"
-      /> */}
+      />
       <CardGrid>
         {items.map((item) => (
           <ActivityCard

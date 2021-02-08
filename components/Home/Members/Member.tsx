@@ -12,7 +12,7 @@ const Description = styled.div`
   h1 {
     margin: 18px 0 0 22px;
     font-weight: 400;
-    font-size 20px;
+    font-size: 20px;
     line-height: 24px;
   }
   
@@ -37,13 +37,18 @@ const Description = styled.div`
   li {
     margin-top: 11px;
   }
-
 `
 
-const Wrapper = styled.article`
+const Wrapper = styled.article<{reverse: boolean}>`
   display: flex;
   flex-direction: ${({ reverse }) => (!reverse ? 'row' : 'row-reverse')};
   margin: 9px;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 9px auto;
+    align-content: center;
+  }
 
   ${Description}
 `

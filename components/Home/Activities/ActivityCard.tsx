@@ -4,7 +4,6 @@ import { Colors } from 'util/constant'
 interface ActivityCardProps {
   title: String;
   description: String;
-
 }
 
 const CardWrapper = styled.div`
@@ -24,6 +23,19 @@ const CardWrapper = styled.div`
     text-align: left;
     font-size: 16px;
     color: ${Colors.textLight}
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 0 auto;
+    h2 {
+      font-weight: bold;
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
   }
 `
 

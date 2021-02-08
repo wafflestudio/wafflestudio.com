@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Colors } from 'util/constant'
+import { useState } from 'react'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -9,15 +10,46 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   padding: 15px 30px;
   justify-content: space-between;
-  
+
   img:hover {
     cursor: pointer;
   }
+
+  // For floating Header
+  position: sticky;
+  top: 0;
+  background: ${Colors.backLight};
+  opacity: 90%;
+  width: 100vw;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    box-shadow: 0 5px 5px ${Colors.backDark};
+  }
+`
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
 
-const MenuContainer = styled.div`
+const MenuIcon = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`
+
+const MenuContainer = styled.div<{menuOpen: boolean}>`
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    display: ${(props) => (props.menuOpen ? "flex" : "none")};
+    flex-direction: column;
+    padding-top: 10px;
+  }
 `
 
 const MenuItem = styled.div`
@@ -33,23 +65,35 @@ const MenuItem = styled.div`
     cursor: pointer;
     color: ${Colors.wafflePrimary};
   }
+  @media (max-width: 768px) {
+    margin: 10px 0px;
+    justify-content: left;
+    font-size: 5vmin;
+  }
 `
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <HeaderContainer>
-      <Link href='/'>
-        <Image src='/images/icon_header.svg' alt='me' width='118' height='48' />
-      </Link>
-      <MenuContainer>
+      <IconContainer>
         <Link href='/'>
-          <MenuItem>소개</MenuItem>
+          <Image src='/images/icon_header.svg' alt='me' width='118' height='48' onClick={() => {setMenuOpen(false)}}/>
+        </Link>
+        <MenuIcon onClick={() => {setMenuOpen(!menuOpen)}}>
+          <Image src='/images/dot.svg' alt='bu' width='32' height='32' />
+        </MenuIcon>
+      </IconContainer>
+      <MenuContainer menuOpen={menuOpen}>
+        <Link href='/'>
+          <MenuItem onClick={() => {setMenuOpen(false)}}>소개</MenuItem>
         </Link>
         <Link href='/people'>
-          <MenuItem>멤버</MenuItem>
+          <MenuItem onClick={() => {setMenuOpen(false)}}>멤버</MenuItem>
         </Link>
         <Link href='/contact'>
-          <MenuItem>연락처</MenuItem>
+          <MenuItem onClick={() => {setMenuOpen(false)}}>연락처</MenuItem>
         </Link>
       </MenuContainer>
     </HeaderContainer>

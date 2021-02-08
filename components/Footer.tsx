@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `
 
 const TextContainer = styled.div`
-  margin-left: 100px;
+  margin-left: 5vw;
   font-size: 16px;
   font-weight: lighter;
   text-align: left;
@@ -22,7 +22,7 @@ const TextContainer = styled.div`
 `
 
 const IconContainer = styled.div`
-  margin-right: 100px;
+  margin-right: 5vw;
 `
 
 const Footer = () => {
