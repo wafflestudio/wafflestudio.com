@@ -21,7 +21,7 @@ const HeaderContainer = styled.div`
   background: ${Colors.backLight};
   opacity: 90%;
   width: 100vw;
-  z-index: 1;
+  z-index: 2;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -68,35 +68,47 @@ const MenuItem = styled.div`
   @media (max-width: 768px) {
     margin: 10px 0px;
     justify-content: left;
-    font-size: 5vmin;
+    font-size: 4vmin;
   }
+`
+
+const OverlayBox = styled.div`
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%;
+  height: 100%;
 `
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <HeaderContainer>
-      <IconContainer>
-        <Link href='/'>
-          <Image src='/images/icon_header.svg' alt='me' width='118' height='48' onClick={() => {setMenuOpen(false)}}/>
-        </Link>
-        <MenuIcon onClick={() => {setMenuOpen(!menuOpen)}}>
-          <Image src='/images/dot.svg' alt='bu' width='32' height='32' />
-        </MenuIcon>
-      </IconContainer>
-      <MenuContainer menuOpen={menuOpen}>
-        <Link href='/'>
-          <MenuItem onClick={() => {setMenuOpen(false)}}>소개</MenuItem>
-        </Link>
-        <Link href='/people'>
-          <MenuItem onClick={() => {setMenuOpen(false)}}>멤버</MenuItem>
-        </Link>
-        <Link href='/contact'>
-          <MenuItem onClick={() => {setMenuOpen(false)}}>연락처</MenuItem>
-        </Link>
-      </MenuContainer>
-    </HeaderContainer>
+    <>
+      <HeaderContainer>
+        <IconContainer>
+          <Link href='/'>
+            <Image src='/images/icon_header.svg' alt='me' width='118' height='48' onClick={() => {setMenuOpen(false)}}/>
+          </Link>
+          <MenuIcon onClick={() => {setMenuOpen(!menuOpen)}}>
+            <Image src='/images/dot.svg' alt='bu' width='32' height='32' />
+          </MenuIcon>
+        </IconContainer>
+        <MenuContainer menuOpen={menuOpen}>
+          <Link href='/'>
+            <MenuItem onClick={() => {setMenuOpen(false)}}>소개</MenuItem>
+          </Link>
+          <Link href='/people'>
+            <MenuItem onClick={() => {setMenuOpen(false)}}>멤버</MenuItem>
+          </Link>
+          <Link href='/contact'>
+            <MenuItem onClick={() => {setMenuOpen(false)}}>연락처</MenuItem>
+          </Link>
+        </MenuContainer>
+      </HeaderContainer>
+      <OverlayBox onClick={()=> {setMenuOpen(false)}}/>
+    </>
   )
 }
 

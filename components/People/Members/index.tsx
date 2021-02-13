@@ -7,24 +7,11 @@ const Box = styled.section`
   margin: 100px auto;
 
   @media (max-width: 768px) {
+    margin-top: 160px;
     display: flex;
     flex-direction: column;
     width: 90vw;
   }
-`
-
-const Title = styled.h1`
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28.8px;
-  color: #111111;
-`
-
-const SubTitle = styled.h2`
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #666665;
 `
 
 const MembersWrapper = styled.div`
@@ -34,9 +21,17 @@ const MembersWrapper = styled.div`
   width: 100%;
   margin: 30px 8px 30px 8px;
 
-  @media (max-width: 768px) {
+  @media (min-width: 510px) and (max-width: 768px) {
     align-self: center;
     grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 510px) {
+    align-self: center;
+    grid-template-columns: 1fr;
     width: 90%;
     margin: 0px;
     margin-top: 30px;
@@ -49,7 +44,6 @@ const Members = () => (
         title="와플스튜디오 구성원"
         subTitle="와플스튜디오의 전 / 현 구성원 입니다."
     />
-    <SubTitle></SubTitle>
     <MembersWrapper>
       <Member
         name={'김상민'}

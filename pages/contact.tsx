@@ -58,8 +58,8 @@ animation: fadein 1s;
 }
 @media (max-width: 768px) {
   flex-direction: column;
-  width: 80vw;
-  margin-top: 40vmin;
+  width: 70vw;
+  margin-top: 160px;
   margin-bottom: 30vmin;
 }
 `
@@ -116,12 +116,12 @@ const Title= styled.div`
     width: 100%;
 
     h1 {
-      font-size: 11vmin;
-      line-height: 12vmin;
+      font-size: 10vmin;
+      line-height: 11vmin;
     }
     h2 {
-      font-size: 4vmin;
-      line-height: 5vmin;
+      font-size: 3.5vmin;
+      line-height: 4vmin;
     }
     margin-left: auto;
   }
@@ -293,7 +293,7 @@ const Contact = () => {
             <h2>와플스튜디오의 새소식이 올라오는 페이스북입니다</h2>
           </ContentTitle>
           <ContentMain>
-            <Image src="/images/facebook.png" alt="Map" width="447" height="259"/>
+            <Image src="/images/facebook.png" alt="Facebook" width="447" height="259"/>
             <Description>
               <SubTitleContainer>
                 <h1>

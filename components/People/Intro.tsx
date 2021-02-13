@@ -58,10 +58,10 @@ const Box = styled.section`
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-    width: 90vw;
+    width: 80vw;
     align-items: center;
     .title {
-      margin-top: 40px;
+      margin-top: 3vmin;
     }
   }
 
@@ -77,8 +77,8 @@ const Title = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 10vmin;
+    line-height: 11vmin;
   }
 `
 
@@ -89,8 +89,9 @@ const SubTitle = styled.h2`
   color: #666665;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    line-height: 40px;
+    margin-top: 1vmin;
+    font-size: 3.5vmin;
+    line-height: 4vmin;
   }
 `
 

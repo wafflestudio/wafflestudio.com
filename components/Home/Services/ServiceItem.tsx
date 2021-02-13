@@ -12,9 +12,12 @@ const Wrapper = styled.div<{ back: string }>`
   background: url(${(props) => props.back});
 
   @media (max-width: 768px) {
-    width: 80vw;
-    height: 780px;
+    width: 100%;
+    height: 0;
+    padding-top: 150%;
     flex-direction: column;
+    align-self: center;
+    border: solid 1px red;
   }
 `
 
@@ -25,6 +28,7 @@ const ImagePanel = styled.div`
   justify-content: flex-end;
 
   @media (max-width: 768px) {
+    border: solid 1px red;
     margin-top: 30px;
     justify-content: center;
   }

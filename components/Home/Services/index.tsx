@@ -9,7 +9,8 @@ const Wrapper = styled.div`
   width: 780px;
 
   @media (max-width: 768px) {
-    width: 90vw;
+    width: 80vw;
+    border: solid 1px red;
   }
 `
 

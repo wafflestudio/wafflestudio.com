@@ -9,7 +9,7 @@ const TitleText = styled.div`
   color: ${Colors.textDark};
 
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 5vmin;
   }
 `
 
@@ -21,7 +21,7 @@ const SubTitleText = styled.div`
   color: ${Colors.textLight};
 
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: 4vmin;
   }
 `
 

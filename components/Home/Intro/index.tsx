@@ -63,6 +63,9 @@ const IntroText1 = styled.div`
   font-size: 30px;
   font-weight: bold;
   color: ${Colors.textDark};
+  @media (max-width: 768px) {
+    font-size: 5vmin;
+  }
 `
 
 const IntroText2 = styled.div`
@@ -74,6 +77,9 @@ const IntroText2 = styled.div`
   font-size: 60px;
   font-weight: bold;
   color: ${Colors.textDark};
+  @media (max-width: 768px) {
+    font-size: 12vmin;
+  }
 `
 
 const IntroText3 = styled.div`
@@ -84,6 +90,9 @@ const IntroText3 = styled.div`
   align-items: center;
   font-size: 16px;
   color: ${Colors.textLight};
+  @media (max-width: 768px) {
+    font-size: 3.5vmin;
+  }
 `
 
 const HighlightText = styled.div`
