@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Colors } from 'util/constant'
 
-
 const TitleText = styled.div`
   font-weight: bold;
   text-align: left;
@@ -9,7 +8,7 @@ const TitleText = styled.div`
   color: ${Colors.textDark};
 
   @media (max-width: 768px) {
-    font-size: 48px;
+    font-size: 30px;
   }
 `
 
@@ -21,15 +20,17 @@ const SubTitleText = styled.div`
   color: ${Colors.textLight};
 
   @media (max-width: 768px) {
-    font-size: 4vmin;
+    font-size: 20px;
   }
 `
 
-const SectionTitle = (props: { title: String, subTitle: String }) => {
-  return (<>
-    <TitleText>{props.title}</TitleText>
-    <SubTitleText>{props.subTitle}</SubTitleText>
-  </>)
+const SectionTitle = (props: { title: String; subTitle: String }) => {
+  return (
+    <>
+      <TitleText>{props.title}</TitleText>
+      <SubTitleText>{props.subTitle}</SubTitleText>
+    </>
+  )
 }
 
 export default SectionTitle

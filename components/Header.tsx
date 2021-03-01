@@ -89,8 +89,8 @@ const MenuItem = styled.div`
   }
 `
 
-const OverlayBox = styled.div`
-  display: flex;
+const OverlayBox = styled.div<{ menuOpen: boolean }>`
+  display: ${(props) => (props.menuOpen ? 'flex' : 'none')};
   position: fixed;
   z-index: 1;
   top: 0;
@@ -161,6 +161,7 @@ const Header = () => {
         onClick={() => {
           setMenuOpen(false)
         }}
+        menuOpen={menuOpen}
       />
     </>
   )

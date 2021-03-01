@@ -10,11 +10,11 @@ const CarouselWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 70vw;
+    width: 100%;
     align-self: center;
 
-    .carousel .slide {
-      background: none;
+    button {
+      display: none;
     }
   }
 `
