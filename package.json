@@ -11,10 +11,13 @@
     "@types/next": "^9.0.0",
     "@types/styled-components": "^5.1.7",
     "aos": "^2.3.4",
+    "github-markdown-css": "^4.0.0",
     "next": "^10.0.6",
     "next-images": "^1.6.2",
+    "raw-loader": "^4.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
     "react-responsive-carousel": "^3.2.11",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.4"
