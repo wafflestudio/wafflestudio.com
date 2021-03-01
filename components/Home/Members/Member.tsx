@@ -65,11 +65,12 @@ const Description = styled.div`
 const Wrapper = styled.article<{ reverse: boolean }>`
   display: flex;
   flex-direction: ${({ reverse }) => (!reverse ? 'row' : 'row-reverse')};
+  margin: 9px;
 
   @media (max-width: 768px) {
     width: 100%;
     align-content: center;
-
+    margin: 0;
     img {
       width: 240px;
       height: 240px;

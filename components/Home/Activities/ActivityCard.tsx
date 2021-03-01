@@ -22,6 +22,7 @@ const CardWrapper = styled.div`
     margin-top: 10px;
     text-align: left;
     font-size: 16px;
+    line-height: 20px;
     color: ${Colors.textLight};
   }
 
