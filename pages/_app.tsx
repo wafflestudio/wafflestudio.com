@@ -14,10 +14,11 @@ const GlobalStyle = createGlobalStyle`
   
   html {
     height: 100%;
-
+    margin: 0;
   }
 
   body {
+    margin: 0;
     height: 100%;
     font-family: Spoqa Han Sans Neo;
     background: ${Colors.backLight};
