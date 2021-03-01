@@ -19,6 +19,11 @@ const Name = styled.h1`
   font-weight: 400;
   font-size: 16px;
   line-height: 19.2px;
+
+  @media(max-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 `
 
 const Position = styled.h2`
@@ -26,6 +31,12 @@ const Position = styled.h2`
   font-weight: 400;
   font-size: 12px;
   line-height: 14.4px;
+
+  @media(max-width: 768px) {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 22px;
+  }
 `
 
 const Introduction = styled.p`

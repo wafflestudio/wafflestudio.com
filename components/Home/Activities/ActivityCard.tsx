@@ -30,11 +30,11 @@ const CardWrapper = styled.div`
     margin: 0 auto;
     h2 {
       font-weight: bold;
-      font-size: 32px;
+      font-size: 24px;
     }
 
     h3 {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
 `

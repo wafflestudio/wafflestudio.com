@@ -24,9 +24,10 @@ const HeaderContainer = styled.div`
   z-index: 2;
 
   @media (max-width: 768px) {
+    padding-top: 20px;
     flex-direction: column;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     box-shadow: 0 5px 5px ${Colors.backDark};
   }
 `
@@ -37,6 +38,7 @@ const IconContainer = styled.div`
 
 const MenuIcon = styled.div`
   display: none;
+  width: 48px;
   @media (max-width: 768px) {
     display: flex;
   }
@@ -45,10 +47,11 @@ const MenuIcon = styled.div`
 const MenuContainer = styled.div<{menuOpen: boolean}>`
   display: flex;
   flex-direction: row;
+  
   @media (max-width: 768px) {
     display: ${(props) => (props.menuOpen ? "flex" : "none")};
     flex-direction: column;
-    padding-top: 10px;
+    margin-top: 30px;
   }
 `
 
@@ -65,10 +68,12 @@ const MenuItem = styled.div`
     cursor: pointer;
     color: ${Colors.wafflePrimary};
   }
+
   @media (max-width: 768px) {
     margin: 10px 0px;
     justify-content: left;
-    font-size: 4vmin;
+    font-size: 40px;
+    line-height: 44px;
   }
 `
 
@@ -92,7 +97,7 @@ const Header = () => {
             <Image src='/images/icon_header.svg' alt='me' width='118' height='48' onClick={() => {setMenuOpen(false)}}/>
           </Link>
           <MenuIcon onClick={() => {setMenuOpen(!menuOpen)}}>
-            <Image src='/images/dot.svg' alt='bu' width='32' height='32' />
+            <Image src='/images/Union.svg' alt='me' width='118' height='48'/>
           </MenuIcon>
         </IconContainer>
         <MenuContainer menuOpen={menuOpen}>

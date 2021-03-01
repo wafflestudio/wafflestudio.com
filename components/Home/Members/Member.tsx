@@ -37,6 +37,18 @@ const Description = styled.div`
   li {
     margin-top: 11px;
   }
+
+  @media(max-width: 768px) {
+    height: 200px;
+    h1 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    h2, li {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
 `
 
 const Wrapper = styled.article<{reverse: boolean}>`

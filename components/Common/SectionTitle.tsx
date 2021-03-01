@@ -9,7 +9,7 @@ const TitleText = styled.div`
   color: ${Colors.textDark};
 
   @media (max-width: 768px) {
-    font-size: 5vmin;
+    font-size: 48px;
   }
 `
 

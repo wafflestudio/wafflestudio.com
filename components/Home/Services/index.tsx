@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 80vw;
-    border: solid 1px red;
   }
 `
 

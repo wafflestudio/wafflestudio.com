@@ -24,7 +24,7 @@ const MembersWrapper = styled.div`
   @media (min-width: 510px) and (max-width: 768px) {
     align-self: center;
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    width: 100%;
     margin: 0px;
     margin-top: 30px;
   }

@@ -61,7 +61,7 @@ const TextPanel = styled.div`
   }
 
   @media (max-width: 768px) {
-    //border: solid 1px black;
+    border: solid 1px red;
     h1 {
       margin-left: 10px;
       font-size: 60px;

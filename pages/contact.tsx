@@ -58,9 +58,9 @@ animation: fadein 1s;
 }
 @media (max-width: 768px) {
   flex-direction: column;
-  width: 70vw;
-  margin-top: 160px;
-  margin-bottom: 30vmin;
+  width: 660px;
+  margin-top: 250px;
+  margin-bottom: 200px;
 }
 `
 const Address= styled.section`
@@ -83,8 +83,8 @@ const Address= styled.section`
     width: 95%;
     margin: 0 auto;
 
-    font-size: 4.5vmin;
-    line-height: 6vmin;
+    font-size: 40px;
+    line-height: 48px;
     font-weight: 100;
   }
 `
@@ -116,12 +116,12 @@ const Title= styled.div`
     width: 100%;
 
     h1 {
-      font-size: 10vmin;
-      line-height: 11vmin;
+      font-size: 96px;
+      line-height: 112px;
     }
     h2 {
-      font-size: 3.5vmin;
-      line-height: 4vmin;
+      font-size: 38px;
+      line-height: 48px;
     }
     margin-left: auto;
   }
@@ -131,8 +131,7 @@ const ContentContainer= styled.div`
   margin: 100px auto;
 
   @media (max-width: 768px) {
-    width: 80vw;
-    margin: 0 auto;
+    width: 660px;
   }
 `
 
@@ -150,6 +149,18 @@ const ContentTitle= styled.div`
     font-weight: 400;
     font-size: 20px;
     color: #666665;
+  }
+
+  @media (max-width: 768px) {
+    margin: 50px 0 50px;
+    h1 {
+      line-height: 56px;
+      font-size: 52px;
+    }
+    h2 {
+      line-height: 40px;
+      font-size: 36px;
+    }
   }
 `
 
@@ -178,9 +189,14 @@ const SubTitleContainer= styled.div`
   @media (max-width: 768px) {
     h1 {
       text-align: center;
+      line-height: 48px;
+      font-size: 44px;
+      margin-bottom: 40px;
     }
     h2 {
       text-align: center;
+      line-height: 32px;
+      font-size: 28px;
     }
   }
 `
@@ -198,6 +214,15 @@ const ButtonContainer= styled.div`
     line-height: 52px;
     text-align: center;
     color: #fffefc;
+  }
+
+  @media (max-width: 768px) {
+    button {
+      width: 380px;
+      height: 85px;
+      margin-top: 50px;
+      font-size: 36px;
+    }
   }
 `
 const Description= styled.div`
