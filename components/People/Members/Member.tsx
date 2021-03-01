@@ -75,24 +75,27 @@ const LinkItem = styled.a`
   }
 `
 
-interface Links {
+interface Props {
+  name: String
+  githubId: String
+  position: String
+  introduction: String
   instagram?: string
   facebook?: string
   github?: string
   web?: string
 }
 
-interface Props {
-  name: String
-  githubId: String
-  position: String
-  introduction: String
-  links: Links
-}
-
-const Member = ({ name, githubId, position, introduction, links }: Props) => {
-  const { instagram, facebook, github, web } = links
-
+const Member = ({
+  name,
+  githubId,
+  position,
+  introduction,
+  instagram,
+  facebook,
+  github,
+  web,
+}: Props) => {
   return (
     <Box>
       <Description>

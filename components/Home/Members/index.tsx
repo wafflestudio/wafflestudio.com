@@ -30,7 +30,7 @@ const members = [
   {
     reverse: false,
     src: '/images/designers.svg',
-    status: '얜 뭐냐',
+    status: 'Designers',
     statusComment: '뭐냐고',
     descriptions: ['설명 1번', '설명 2번', '설명 3번'],
   },
