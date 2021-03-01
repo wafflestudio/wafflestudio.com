@@ -8,6 +8,15 @@ const CarouselWrapper = styled.div`
   .carousel .slide {
     background: none;
   }
+
+  @media (max-width: 768px) {
+    width: 70vw;
+    align-self: center;
+
+    .carousel .slide {
+      background: none;
+    }
+  }
 `
 
 const ServiceCarousel = () => {

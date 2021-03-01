@@ -27,7 +27,7 @@ function App({ Component, pageProps }: AppProps) {
           rel='stylesheet'
           type='text/css'
         />
-        <title>와플 홈피</title>
+        <title>와플 홈페이지</title>
       </Head>
       <GlobalStyle />
       <Header />

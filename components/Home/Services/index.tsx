@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 780px;
+
+  @media (max-width: 768px) {
+    width: 80vw;
+  }
 `
 
 const DynamicCarousel = dynamic(() => import('./ServiceCarousel'))

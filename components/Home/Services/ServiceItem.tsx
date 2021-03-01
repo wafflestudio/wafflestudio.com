@@ -3,13 +3,22 @@ import Image from 'next/image'
 import { Colors } from 'util/constant'
 import DownloadLink from 'components/Common/DownloadLink'
 
-const Wrapper = styled.div<{ back: String }>`
+const Wrapper = styled.div<{ back: string }>`
   display: flex;
   align-items: center;
   border-radius: 50px;
   width: 780px;
   height: 520px;
   background: url(${(props) => props.back});
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 0;
+    padding-top: 150%;
+    flex-direction: column;
+    align-self: center;
+    border: solid 1px red;
+  }
 `
 
 const ImagePanel = styled.div`
@@ -17,6 +26,12 @@ const ImagePanel = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    border: solid 1px red;
+    margin-top: 30px;
+    justify-content: center;
+  }
 `
 
 const TextPanel = styled.div`
@@ -43,6 +58,24 @@ const TextPanel = styled.div`
     margin-top: 90px;
     font-size: 16px;
     color: ${Colors.backLight};
+  }
+
+  @media (max-width: 768px) {
+    border: solid 1px red;
+    h1 {
+      margin-left: 10px;
+      font-size: 60px;
+    }
+
+    h2 {
+      margin: 10px auto;
+      font-size: 28px;
+    }
+
+    h3 {
+      margin: 30px 0px;
+      font-size: 24px;
+    }
   }
 `
 
