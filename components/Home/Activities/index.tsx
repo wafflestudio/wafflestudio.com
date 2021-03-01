@@ -32,11 +32,13 @@ const Activities = () => {
       title: '코딩모임',
       description:
         '와플 스튜디오에서는 매 주 코딩 모임을 통해 와플 스튜디오 내부 개발자 간의 커뮤니티를 형성합니다.',
+      src: '/images/coMo.png',
     },
     {
       title: '루키즈 세미나',
       description:
         '루키 선발 후 한 학기동안 매 주 세미나를 통해 실제 개발을 진행할 수 있을 정도로 교육을 진행합니다.',
+      src: '/images/seminar.png',
     },
     {
       title: '와카톤',
@@ -62,6 +64,7 @@ const Activities = () => {
             key={item.title}
             title={item.title}
             description={item.description}
+            src={item.src}
           />
         ))}
       </CardGrid>

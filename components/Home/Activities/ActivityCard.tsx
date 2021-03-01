@@ -4,6 +4,7 @@ import { Colors } from 'util/constant'
 interface ActivityCardProps {
   title: String
   description: String
+  src?: string
 }
 
 const CardWrapper = styled.div`
@@ -41,17 +42,21 @@ const CardWrapper = styled.div`
   }
 `
 
-const CardImage = styled.div`
+const CardImage = styled.div<{ src?: string }>`
   padding-top: 56.25%;
   width: 100%;
   border-radius: 10px;
-  background: ${Colors.backDark};
+  background: center url(${({ src }) => src || '/images/icon_intro.svg'});\
+  background-size: ${({ src }) => (src ? 'cover' : 'contain')};
+  background-repeat: no-repeat;
 `
 
 const ActivityCard = (props: ActivityCardProps) => {
+  console.log(props.src)
+
   return (
     <CardWrapper>
-      <CardImage />
+      <CardImage src={props.src} />
       <h2>{props.title}</h2>
       <h3>{props.description}</h3>
     </CardWrapper>
