@@ -93,7 +93,6 @@ const Member = ({
   introduction,
   instagram,
   facebook,
-  github,
   web,
 }: Props) => {
   return (
@@ -105,12 +104,12 @@ const Member = ({
       </Description>
       <Links>
         {instagram && (
-          <LinkItem href={instagram} target="_blank">
+          <LinkItem href={`https://instagram.com/${instagram}`} target="_blank">
             <Image src="/images/instagram.svg" width="24" height="24" />
           </LinkItem>
         )}
         {facebook && (
-          <LinkItem href={facebook} target="_blank">
+          <LinkItem href={`https://facebook.com/${facebook}`} target="_blank">
             <Image src="/images/facebook.svg" width="24" height="24" />
           </LinkItem>
         )}
@@ -119,8 +118,8 @@ const Member = ({
             <Image src="/images/web.svg" width="24" height="24" />
           </LinkItem>
         )}
-        {github && (
-          <LinkItem href={github} target="_blank">
+        {githubId && (
+          <LinkItem href={`https://github.com/${githubId}`} target="_blank">
             <Image src="/images/github.svg" width="24" height="24" />
           </LinkItem>
         )}
