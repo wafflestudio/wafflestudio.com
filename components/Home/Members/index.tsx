@@ -18,21 +18,33 @@ const members = [
     src: '/images/rookies.svg',
     status: 'Rookies',
     statusComment: '응애! 나 애기루키',
-    descriptions: ['설명 1번', '설명 2번', '설명 3번'],
+    descriptions: [
+      '한 학기동안 매 주 세미나를 통해 개발에 대해 학습합니다.',
+      '세미나와 과제를 모두 완료하면 프로그래머로 승격합니다.',
+      '9월 중 모집',
+    ],
   },
   {
     reverse: true,
     src: '/images/programmers.svg',
     status: 'Programmers',
     statusComment: '프로그래머 데스넨',
-    descriptions: ['설명 1번', '설명 2번', '설명 3번'],
+    descriptions: [
+      '아이디어 기획부터 개발까지, 팀을 구성하여 자율적으로 진행합니다.',
+      '설명 2번',
+      '3월 중 모집',
+    ],
   },
   {
     reverse: false,
     src: '/images/designers.svg',
     status: 'Designers',
     statusComment: '뭐냐고',
-    descriptions: ['설명 1번', '설명 2번', '설명 3번'],
+    descriptions: [
+      '프로젝트 뿐만 아니라, 와플 스튜디오의 굿즈까지 디자인을 담당합니다.',
+      '설명 2번',
+      '상시 모집',
+    ],
   },
 ]
 
