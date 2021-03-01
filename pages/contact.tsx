@@ -338,9 +338,13 @@ const Contact = () => {
                 </h2>
               </SubTitleContainer>
               <ButtonContainer>
-                <Link href={'https://www.naver.com'} passHref>
+                <a
+                  href={'https://www.naver.com'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button>페이지 바로가기</button>
-                </Link>
+                </a>
               </ButtonContainer>
             </Description>
           </ContentMain>

@@ -15,14 +15,14 @@ const Wrapper = styled.div`
 
 const DynamicCarousel = dynamic(() => import('./ServiceCarousel'))
 
-const Services = () => {
+const Services = ({ userAgent }) => {
   return (
     <Wrapper>
       <SectionTitle
         title="서비스"
         subTitle="와플스튜디오에서 제공하는 서비스를 만나보세요."
       />
-      <DynamicCarousel />
+      <DynamicCarousel userAgent={userAgent} />
     </Wrapper>
   )
 }

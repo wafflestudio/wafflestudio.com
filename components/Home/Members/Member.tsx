@@ -95,8 +95,6 @@ const Member = ({
   descriptions,
   src,
 }: Props) => {
-  console.log(src)
-
   return (
     <Wrapper reverse={reverse}>
       <Image src={src} width="100" height="115" />

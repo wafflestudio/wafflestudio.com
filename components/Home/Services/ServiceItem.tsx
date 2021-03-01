@@ -13,11 +13,9 @@ const Wrapper = styled.div<{ back: string }>`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 0;
-    padding-top: 150%;
+    height: 642px;
     flex-direction: column;
-    align-self: center;
-    border: solid 1px red;
+    padding: 50px 0;
   }
 `
 
@@ -28,9 +26,10 @@ const ImagePanel = styled.div`
   justify-content: flex-end;
 
   @media (max-width: 768px) {
-    border: solid 1px red;
-    margin-top: 30px;
-    justify-content: center;
+    img {
+      width: 210px;
+      height: 321px;
+    }
   }
 `
 
@@ -61,20 +60,20 @@ const TextPanel = styled.div`
   }
 
   @media (max-width: 768px) {
-    border: solid 1px red;
+    width: 80%;
     h1 {
-      margin-left: 10px;
-      font-size: 60px;
+      margin: 10px 0;
+      font-size: 40px;
     }
 
     h2 {
-      margin: 10px auto;
-      font-size: 28px;
+      margin: 5px 0;
+      font-size: 20px;
     }
 
     h3 {
-      margin: 30px 0px;
-      font-size: 24px;
+      margin: 0 0 15px;
+      font-size: 16px;
     }
   }
 `
@@ -84,6 +83,7 @@ interface ServiceItemProps {
   title: string
   subtitle: string
   description: string
+  src: string
 }
 
 const ServiceItem = ({
@@ -91,11 +91,12 @@ const ServiceItem = ({
   title,
   subtitle,
   description,
+  src,
 }: ServiceItemProps) => {
   return (
     <Wrapper back={backgroundImage}>
       <ImagePanel>
-        <Image src="/images/siksha_mock.png" width="180px" height="360px" />
+        <Image src={src} width="180" height="360" />
       </ImagePanel>
       <TextPanel>
         <h1>{title}</h1>
