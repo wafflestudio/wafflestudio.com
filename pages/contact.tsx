@@ -308,26 +308,31 @@ const Contact = () => {
                 </Link>
               </ButtonContainer>
             </Description>
-            <Image src="/images/map.png" alt="Map" width="447" height="259" />
+            <Image
+              src="/images/icon_intro.svg"
+              alt="Map"
+              width="447"
+              height="259"
+            />
           </ContentMain>
         </Content>
         <SectionDivider />
         <Content text="right" color={'#3578EA'}>
           <SectionTitle
-            title="와플스튜디오 페이스북"
-            subTitle="와플스튜디오의 새소식이 올라오는 페이스북입니다"
+            title="와플스튜디오 인스타그램"
+            subTitle="와플스튜디오의 새소식이 올라오는 인스타그램입니다"
           />
           <ContentMain>
             <Image
-              src="/images/facebook.png"
-              alt="Facebook"
+              src="/images/instagram.png"
+              alt="Instagram"
               width="447"
               height="259"
             />
             <Description>
               <SubTitleContainer>
                 <h1>
-                  <span>페이스북</span>을
+                  <span>인스타그램</span>을
                   <br />
                   팔로우 하세요
                 </h1>
@@ -339,7 +344,7 @@ const Contact = () => {
               </SubTitleContainer>
               <ButtonContainer>
                 <a
-                  href={'https://www.naver.com'}
+                  href={'https://www.instagram.com/wafflestudio_official/'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
