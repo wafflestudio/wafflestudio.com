@@ -270,6 +270,10 @@
   list-style-type: lower-alpha;
 }
 
+.markdown-body ul li {
+  list-style-type: disc;
+}
+
 .markdown-body dd {
   margin-left: 0;
 }

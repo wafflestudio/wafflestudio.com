@@ -8,6 +8,15 @@ import { Header, Footer } from 'components'
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  ul {
+    list-style: disc;
+  }
+
+  ul ul {
+    list-style: circle;
+  }
+
+
   * {
     box-sizing: border-box;
   }
