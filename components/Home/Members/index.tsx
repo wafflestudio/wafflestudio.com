@@ -17,7 +17,8 @@ const members = [
     reverse: false,
     src: '/images/rookies.svg',
     status: 'Rookies',
-    statusComment: '응애! 나 애기루키',
+    statusComment:
+      '프로젝트를 진행하기 전 서비스 개발에 필요한 지식을 쌓고 있는 인원',
     descriptions: [
       '한 학기동안 매 주 세미나를 통해 개발에 대해 학습합니다.',
       '세미나와 과제를 모두 완료하면 프로그래머로 승격합니다.',
@@ -28,10 +29,9 @@ const members = [
     reverse: true,
     src: '/images/programmers.svg',
     status: 'Programmers',
-    statusComment: '프로그래머 데스넨',
+    statusComment: '준비가 끝나고 서비스 개발을 진행하는 인원',
     descriptions: [
       '아이디어 기획부터 개발까지, 팀을 구성하여 자율적으로 진행합니다.',
-      '설명 2번',
       '3월 중 모집',
     ],
   },
@@ -39,10 +39,9 @@ const members = [
     reverse: false,
     src: '/images/designers.svg',
     status: 'Designers',
-    statusComment: '뭐냐고',
+    statusComment: '서비스의 디자인은 우리가 책임진다!',
     descriptions: [
       '프로젝트 뿐만 아니라, 와플 스튜디오의 굿즈까지 디자인을 담당합니다.',
-      '설명 2번',
       '상시 모집',
     ],
   },
