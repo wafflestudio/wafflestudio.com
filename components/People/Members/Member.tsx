@@ -104,22 +104,22 @@ const Member = ({
       </Description>
       <Links>
         {instagram && (
-          <LinkItem href={`https://instagram.com/${instagram}`} target="_blank">
+          <LinkItem href={`https://instagram.com/${instagram}`}>
             <Image src="/images/instagram.svg" width="24" height="24" />
           </LinkItem>
         )}
         {facebook && (
-          <LinkItem href={`https://facebook.com/${facebook}`} target="_blank">
+          <LinkItem href={`https://facebook.com/${facebook}`}>
             <Image src="/images/facebook.svg" width="24" height="24" />
           </LinkItem>
         )}
         {web && (
-          <LinkItem href={web} target="_blank">
+          <LinkItem href={web}>
             <Image src="/images/web.svg" width="24" height="24" />
           </LinkItem>
         )}
         {githubId && (
-          <LinkItem href={`https://github.com/${githubId}`} target="_blank">
+          <LinkItem href={`https://github.com/${githubId}`}>
             <Image src="/images/github.svg" width="24" height="24" />
           </LinkItem>
         )}
