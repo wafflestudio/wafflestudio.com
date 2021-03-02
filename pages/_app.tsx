@@ -8,11 +8,27 @@ import { Header, Footer } from 'components'
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  ul {
+    list-style: disc;
+  }
+
+  ul ul {
+    list-style: circle;
+  }
+
+
   * {
     box-sizing: border-box;
   }
+  
+  html {
+    height: 100%;
+    margin: 0;
+  }
 
   body {
+    margin: 0;
+    height: 100%;
     font-family: Spoqa Han Sans Neo;
     background: ${Colors.backLight};
   }
@@ -23,11 +39,11 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link
-          href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css'
-          rel='stylesheet'
-          type='text/css'
+          href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+          rel="stylesheet"
+          type="text/css"
         />
-        <title>와플 홈피</title>
+        <title>와플스튜디오</title>
       </Head>
       <GlobalStyle />
       <Header />

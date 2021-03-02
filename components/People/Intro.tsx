@@ -25,7 +25,8 @@ const Box = styled.section`
       transform: translateY(0%);
     }
   }
-  @-moz-keyframes fadein { /* Firefox */
+  @-moz-keyframes fadein {
+    /* Firefox */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -35,7 +36,8 @@ const Box = styled.section`
       transform: translateY(0%);
     }
   }
-  @-webkit-keyframes fadein { /* Safari and Chrome */
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -45,7 +47,8 @@ const Box = styled.section`
       transform: translateY(0%);
     }
   }
-  @-o-keyframes fadein { /* Opera */
+  @-o-keyframes fadein {
+    /* Opera */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -56,6 +59,16 @@ const Box = styled.section`
     }
   }
 
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    .title {
+      margin-top: 10px;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -66,6 +79,11 @@ const Title = styled.h1`
   span {
     color: ${({ color }) => color};
   }
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 45px;
+  }
 `
 
 const SubTitle = styled.h2`
@@ -73,18 +91,24 @@ const SubTitle = styled.h2`
   font-size: 20px;
   line-height: 24px;
   color: #666665;
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 `
 
 const Intro = () => (
   <Box>
-    <div className='title'>
+    <div className="title">
       <Title color={'#F0975E'}>
         와플스튜디오의 <br />
         <span>멤버</span>를 소개합니다.
       </Title>
       <SubTitle>와플스튜디오와 함께하는 사람들</SubTitle>
     </div>
-    <Image src='/images/people.svg' width='368' height='337' />
+    <Image src="/images/people.svg" width="368" height="337" />
   </Box>
 )
 

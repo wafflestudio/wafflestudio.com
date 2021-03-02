@@ -23,7 +23,8 @@ const Wrapper = styled.div`
       transform: translateY(0%);
     }
   }
-  @-moz-keyframes fadein { /* Firefox */
+  @-moz-keyframes fadein {
+    /* Firefox */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -33,7 +34,8 @@ const Wrapper = styled.div`
       transform: translateY(0%);
     }
   }
-  @-webkit-keyframes fadein { /* Safari and Chrome */
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -43,7 +45,8 @@ const Wrapper = styled.div`
       transform: translateY(0%);
     }
   }
-  @-o-keyframes fadein { /* Opera */
+  @-o-keyframes fadein {
+    /* Opera */
     from {
       opacity: 0;
       transform: translateY(15%);
@@ -63,6 +66,9 @@ const IntroText1 = styled.div`
   font-size: 30px;
   font-weight: bold;
   color: ${Colors.textDark};
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 const IntroText2 = styled.div`
@@ -74,6 +80,9 @@ const IntroText2 = styled.div`
   font-size: 60px;
   font-weight: bold;
   color: ${Colors.textDark};
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `
 
 const IntroText3 = styled.div`
@@ -84,22 +93,27 @@ const IntroText3 = styled.div`
   align-items: center;
   font-size: 16px;
   color: ${Colors.textLight};
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 `
 
 const HighlightText = styled.div`
   font-weight: bold;
-  color: ${Colors.wafflePrimary}
+  color: ${Colors.wafflePrimary};
 `
 
 const Intro = () => {
   return (
     <Wrapper>
-      <Image src='/images/icon_intro.svg' alt='me' width='220' height='220' />
+      <Image src="/images/icon_intro.svg" alt="me" width="220" height="220" />
       <IntroText1>맛있는 서비스가 탄생하는 곳</IntroText1>
       <IntroText2>와플스튜디오</IntroText2>
       <IntroText3>여기는 서울대학교 컴퓨터공학부</IntroText3>
       <IntroText3>
-        <HighlightText>웹/앱 개발 동아리&nbsp;</HighlightText> 와플스튜디오입니다.
+        <HighlightText>웹/앱 개발 동아리&nbsp;</HighlightText>{' '}
+        와플스튜디오입니다.
       </IntroText3>
     </Wrapper>
   )

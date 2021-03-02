@@ -14,31 +14,56 @@ const Wrapper = styled.div`
 `
 
 const TextContainer = styled.div`
-  margin-left: 100px;
+  margin-left: 50px;
   font-size: 16px;
+  line-height: 20px;
   font-weight: lighter;
   text-align: left;
   color: ${Colors.textLight};
+
+  a {
+    color: ${Colors.textLight};
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 20px;
+    font-size: 12px;
+
+    .mobile-only {
+      display: block;
+    }
+  }
 `
 
 const IconContainer = styled.div`
-  margin-right: 100px;
+  margin-right: 50px;
+
+  @media (max-width: 768px) {
+    margin-right: 20px;
+  }
 `
 
 const Footer = () => {
   return (
     <Wrapper>
       <TextContainer>
-        서울특별시 어쩌구 저쩌구 <br />
-        master@wafflestudio.com <br />
-        Developed by sanggggg, ars-ki-00
+        서울특별시 관악구 관악로 1 <br className="mobile-only" />
+        서울대학교 공과대학 301-314 <br />
+        <a href="mailto:master@wafflestudio.com">
+          master@wafflestudio.com
+        </a>{' '}
+        <br />
+        Developed by sanggggg, ars-ki-00, qrid
       </TextContainer>
       <IconContainer>
-        <Image src='/images/icon_header.svg' alt='me' width='118' height='48' />
+        <Image src="/images/icon_header.svg" alt="me" width="118" height="48" />
       </IconContainer>
     </Wrapper>
   )
-
 }
 
 export default Footer

@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import SectionDivider from 'components/Common/SectionDivider'
+import SectionTitle from 'components/Common/SectionTitle'
 
 const TitleContainer = styled.section`
   display: flex;
   width: 820px;
-  margin: 192px auto;
+  margin: 192px auto 100px auto;
 
   animation: fadein 1s;
   -moz-animation: fadein 1s; /* Firefox */
@@ -56,8 +57,13 @@ const TitleContainer = styled.section`
       transform: translateY(0%);
     }
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }
 `
-
 const Address = styled.section`
   width: 446px;
   font-size: 28px;
@@ -73,9 +79,18 @@ const Address = styled.section`
     color: #ed8573;
     background-color: #fffefc;
   }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 0 auto;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 100;
+  }
 `
 
-const Title = styled.section`
+const Title = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -97,15 +112,32 @@ const Title = styled.section`
     font-size: 20px;
     color: #666665;
   }
-`
 
-const ContentContainer = styled.section`
+  @media (max-width: 768px) {
+    width: 100%;
+
+    h1 {
+      font-size: 48px;
+      line-height: 50px;
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    margin-left: auto;
+  }
+`
+const ContentContainer = styled.div`
   width: 780px;
-  margin: 200px auto;
+  margin: 100px auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
-const Content = styled.article`
-  margin: 100px 0 100px;
+const ContentTitle = styled.div`
+  margin: 100px 0 50px;
 
   h1 {
     line-height: 28.8px;
@@ -119,44 +151,111 @@ const Content = styled.article`
     font-size: 20px;
     color: #666665;
   }
+
+  @media (max-width: 768px) {
+    margin: 50px 0 50px;
+    h1 {
+      line-height: 56px;
+      font-size: 52px;
+    }
+    h2 {
+      line-height: 40px;
+      font-size: 36px;
+    }
+  }
 `
 
-const Description = styled.div`
+const ContentMain = styled.div`
   display: flex;
-  margin-top: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
 
-  .text {
-    width: 254px;
-    height: 192px;
+const SubTitleContainer = styled.div`
+  h1 {
+    line-height: 28.8px;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
-    margin: 31px 40px 0 13px;
+  h2 {
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666665;
+  }
 
-    &.left {
-      text-align: right;
+  @media (max-width: 768px) {
+    h1 {
+      text-align: center;
+      line-height: 36px;
+      font-size: 34px;
     }
-
-    span {
-      color: ${({ color }) => color};
-    }
-
     h2 {
-      margin: 20px 0;
-      font-size: 16px;
-      line-height: 19.2px;
+      text-align: center;
+      line-height: 24px;
+      font-size: 20px;
     }
+  }
+`
 
+const ButtonContainer = styled.div`
+  button {
+    margin-top: 16px;
+    width: 254px;
+    height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border-color: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 52px;
+    text-align: center;
+    color: #fffefc;
+  }
+
+  @media (max-width: 768px) {
     button {
       width: 254px;
       height: 56px;
-      background: ${({ color }) => color};
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 12px;
-      border-color: transparent;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 52px;
-      text-align: center;
-      color: #fffefc;
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+`
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`
+const Content = styled.div<{ text: string; color: string }>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  //sending props
+  ${ButtonContainer} {
+    button {
+      background: ${(props) => props.color};
+    }
+  }
+  ${SubTitleContainer} {
+    span {
+      color: ${(props) => props.color};
+    }
+  }
+  ${SubTitleContainer} {
+    text-align: ${(props) => (props.text === 'right' ? 'left' : 'right')};
+  }
+  @media (max-width: 768px) {
+    ${ContentMain} {
+      flex-direction: ${(props) =>
+        props.text === 'right' ? 'column' : 'column-reverse'};
     }
   }
 `
@@ -179,61 +278,81 @@ const Contact = () => {
             <br />
             <span className="text-orange">연락</span>하세요
           </h1>
-          <h2>와플스튜디오와 함께하실 분들을 찾습니다.</h2>
+          <h2>와플스튜디오와 함께하실 분들을 찾습니다</h2>
         </Title>
       </TitleContainer>
+
       <ContentContainer>
-        <Content color={'#ED8573'}>
-          <h1>와플스튜디오 동아리방</h1>
-          <h2>
-            서울대학교 301동 314호 내부에 위치한 와플스튜디오 동아리방 입니다.
-          </h2>
-          <Description color={'#ED8573'}>
-            <div className="text left">
-              <h1>
-                <span>동아리방</span>으로
-                <br />
-                찾아오세요
-              </h1>
-              <h2>
-                컴퓨터공학부 과방 모퉁이에
-                <br />
-                동아리방이 있습니다.
-              </h2>
-              <Link href={'https://www.naver.com'} passHref>
-                <button>지도 바로가기</button>
-              </Link>
-            </div>
-            <Image src="/images/map.png" alt="Map" width="447" height="259" />
-          </Description>
-        </Content>
-        <SectionDivider />
-        <Content color={'#3578EA'}>
-          <h1>와플스튜디오 페이스북</h1>
-          <h2>와플스튜디오의 새소식이 올라오는 페이스북입니다</h2>
-          <Description color={'#3578EA'}>
+        <Content text="left" color={'#ED8573'}>
+          <SectionTitle
+            title="와플스튜디오 동아리방"
+            subTitle="서울대학교 301동 314호 내부에 위치한 와플스튜디오 동아리방 입니다."
+          />
+          <ContentMain>
+            <Description>
+              <SubTitleContainer>
+                <h1>
+                  <span>동아리방</span>으로
+                  <br />
+                  찾아오세요
+                </h1>
+                <h2>
+                  컴퓨터공학부 과방 모퉁이에
+                  <br />
+                  동아리방이 있습니다.
+                </h2>
+              </SubTitleContainer>
+              <ButtonContainer>
+                <Link href={'https://www.naver.com'} passHref>
+                  <button>지도 바로가기</button>
+                </Link>
+              </ButtonContainer>
+            </Description>
             <Image
-              src="/images/facebook.png"
+              src="/images/icon_intro.svg"
               alt="Map"
               width="447"
               height="259"
             />
-            <div className="text right">
-              <h1>
-                <span>페이스북</span>을
-                <br />
-                팔로우 하세요
-              </h1>
-              <h2>
-                와플스튜디오의 새 소식을
-                <br />
-                빠르게 만날 수 있습니다.
-              </h2>
-              <Link href={'https://www.naver.com'} passHref>
-                <button>페이지 바로가기</button>
-              </Link>
-            </div>
-          </Description>
+          </ContentMain>
+        </Content>
+        <SectionDivider />
+        <Content text="right" color={'#3578EA'}>
+          <SectionTitle
+            title="와플스튜디오 인스타그램"
+            subTitle="와플스튜디오의 새소식이 올라오는 인스타그램입니다"
+          />
+          <ContentMain>
+            <Image
+              src="/images/instagram.png"
+              alt="Instagram"
+              width="447"
+              height="259"
+            />
+            <Description>
+              <SubTitleContainer>
+                <h1>
+                  <span>인스타그램</span>을
+                  <br />
+                  팔로우 하세요
+                </h1>
+                <h2>
+                  와플스튜디오의 새 소식을
+                  <br />
+                  빠르게 만날 수 있습니다.
+                </h2>
+              </SubTitleContainer>
+              <ButtonContainer>
+                <a
+                  href={'https://www.instagram.com/wafflestudio_official/'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button>페이지 바로가기</button>
+                </a>
+              </ButtonContainer>
+            </Description>
+          </ContentMain>
         </Content>
       </ContentContainer>
     </>

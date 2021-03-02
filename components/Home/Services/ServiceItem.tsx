@@ -3,13 +3,20 @@ import Image from 'next/image'
 import { Colors } from 'util/constant'
 import DownloadLink from 'components/Common/DownloadLink'
 
-const Wrapper = styled.div<{ back: String }>`
+const Wrapper = styled.div<{ back: string }>`
   display: flex;
   align-items: center;
   border-radius: 50px;
   width: 780px;
   height: 520px;
   background: url(${(props) => props.back});
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 642px;
+    flex-direction: column;
+    padding: 50px 0;
+  }
 `
 
 const ImagePanel = styled.div`
@@ -17,6 +24,13 @@ const ImagePanel = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    img {
+      width: 210px;
+      height: 321px;
+    }
+  }
 `
 
 const TextPanel = styled.div`
@@ -44,6 +58,24 @@ const TextPanel = styled.div`
     font-size: 16px;
     color: ${Colors.backLight};
   }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    h1 {
+      margin: 10px 0;
+      font-size: 40px;
+    }
+
+    h2 {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin: 0 0 15px;
+      font-size: 16px;
+    }
+  }
 `
 
 interface ServiceItemProps {
@@ -51,6 +83,7 @@ interface ServiceItemProps {
   title: string
   subtitle: string
   description: string
+  src: string
 }
 
 const ServiceItem = ({
@@ -58,11 +91,12 @@ const ServiceItem = ({
   title,
   subtitle,
   description,
+  src,
 }: ServiceItemProps) => {
   return (
     <Wrapper back={backgroundImage}>
       <ImagePanel>
-        <Image src="/images/siksha_mock.png" width="180px" height="360px" />
+        <Image src={src} width="180" height="360" />
       </ImagePanel>
       <TextPanel>
         <h1>{title}</h1>
