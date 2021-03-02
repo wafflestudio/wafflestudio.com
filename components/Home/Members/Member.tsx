@@ -26,8 +26,7 @@ const Description = styled.div`
 
   ul {
     list-style: disc;
-    list-style-position: inside;
-    padding-left: 31px;
+    margin-left: 40px;
   }
 
   h2 {
@@ -52,12 +51,12 @@ const Description = styled.div`
     }
     h2,
     li {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 12px;
+      line-height: 16px;
     }
 
     ul {
-      padding-left: 16px;
+      margin-left: 30px;
     }
   }
 `
