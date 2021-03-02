@@ -8,11 +8,10 @@ const Box = styled.article`
   border-radius: 12px;
   background-color: #f8f5f1;
   overflow: auto;
-  //margin: 8px 6px;
 `
 
 const Description = styled.div`
-  margin: 20px 0 0 20px;
+  margin: 15px 15px 0;
 `
 
 const Name = styled.h1`
@@ -20,9 +19,9 @@ const Name = styled.h1`
   font-size: 16px;
   line-height: 19.2px;
 
-  @media(max-width: 768px) {
-    font-size: 24px;
-    line-height: 28px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 18px;
   }
 `
 
@@ -32,48 +31,70 @@ const Position = styled.h2`
   font-size: 12px;
   line-height: 14.4px;
 
-  @media(max-width: 768px) {
-    font-weight: 100;
-    font-size: 16px;
-    line-height: 22px;
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
   }
 `
 
 const Introduction = styled.p`
   margin-top: 22px;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 12px;
-  line-height: 14.4px;
+  line-height: 16px;
+
+  @media (max-width: 768px) {
+    margin-top: 16px;
+  }
 `
 
 const Links = styled.div`
   position: absolute;
   right: 9px;
   bottom: 11px;
+  background-color: #f8f5f1;
+
+  @media (max-width: 768px) {
+    positin: absolute;
+    right: 9px;
+    bottom: 5px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
 `
 
 const LinkItem = styled.a`
   margin: 0 6px;
-`
 
-interface Links {
-  instagram?: string
-  facebook?: string
-  github?: string
-  web?: string
-}
+  @media (max-wjidth: 768px) {
+    margin: 0;
+  }
+`
 
 interface Props {
   name: String
   githubId: String
   position: String
   introduction: String
-  links: Links
+  instagram?: string
+  facebook?: string
+  github?: string
+  web?: string
 }
 
-const Member = ({ name, githubId, position, introduction, links }: Props) => {
-  const { instagram, facebook, github, web } = links
-
+const Member = ({
+  name,
+  githubId,
+  position,
+  introduction,
+  instagram,
+  facebook,
+  web,
+}: Props) => {
   return (
     <Box>
       <Description>
@@ -83,23 +104,23 @@ const Member = ({ name, githubId, position, introduction, links }: Props) => {
       </Description>
       <Links>
         {instagram && (
-          <LinkItem href={instagram} target='_blank'>
-            <Image src='/images/instagram.svg' width='24' height='24' />
+          <LinkItem href={`https://instagram.com/${instagram}`}>
+            <Image src="/images/instagram.svg" width="24" height="24" />
           </LinkItem>
         )}
         {facebook && (
-          <LinkItem href={facebook} target='_blank'>
-            <Image src='/images/facebook.svg' width='24' height='24' />
+          <LinkItem href={`https://facebook.com/${facebook}`}>
+            <Image src="/images/facebook.svg" width="24" height="24" />
           </LinkItem>
         )}
         {web && (
-          <LinkItem href={web} target='_blank'>
-            <Image src='/images/web.svg' width='24' height='24' />
+          <LinkItem href={web}>
+            <Image src="/images/web.svg" width="24" height="24" />
           </LinkItem>
         )}
-        {github && (
-          <LinkItem href={github} target='_blank'>
-            <Image src='/images/github.svg' width='24' height='24' />
+        {githubId && (
+          <LinkItem href={`https://github.com/${githubId}`}>
+            <Image src="/images/github.svg" width="24" height="24" />
           </LinkItem>
         )}
       </Links>

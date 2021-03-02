@@ -2,15 +2,17 @@ import Member from './Member'
 import styled from 'styled-components'
 import SectionTitle from 'components/Common/SectionTitle'
 
+import members from './members.json'
+
 const Box = styled.section`
   width: 780px;
   margin: 100px auto;
 
   @media (max-width: 768px) {
-    margin-top: 160px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 90%;
   }
 `
 
@@ -41,74 +43,22 @@ const MembersWrapper = styled.div`
 const Members = () => (
   <Box>
     <SectionTitle
-        title="와플스튜디오 구성원"
-        subTitle="와플스튜디오의 전 / 현 구성원 입니다."
+      title="와플스튜디오 구성원"
+      subTitle="와플스튜디오의 전 / 현 구성원 입니다."
     />
     <MembersWrapper>
-      <Member
-        name={'김상민'}
-        githubId={'sanggggg'}
-        position={'Android Developer'}
-        introduction={'사람에 대한 소개'}
-        links={{
-          github: 'https://www.naver.com',
-          facebook: 'https://www.naver.com',
-          web: 'https://www.naver.com',
-          instagram: 'https://www.naver.com',
-        }}
-      />
-      <Member
-        name={'김상민'}
-        githubId={'sanggggg'}
-        position={'Android Developer'}
-        introduction={'사람에 대한 소개'}
-        links={{
-          github: 'https://www.naver.com',
-          facebook: 'https://www.naver.com',
-          web: 'https://www.naver.com',
-          instagram: 'https://www.naver.com',
-        }}
-
-      />
-      <Member
-        name={'김상민'}
-        githubId={'sanggggg'}
-        position={'Android Developer'}
-        introduction={'사람에 대한 소개'}
-        links={{
-          github: 'https://www.naver.com',
-          facebook: 'https://www.naver.com',
-          web: 'https://www.naver.com',
-          instagram: 'https://www.naver.com',
-        }}
-
-      />
-      <Member
-        name={'김상민'}
-        githubId={'sanggggg'}
-        position={'Android Developer'}
-        introduction={'사람에 대한 소개'}
-        links={{
-          github: 'https://www.naver.com',
-          facebook: 'https://www.naver.com',
-          web: 'https://www.naver.com',
-          instagram: 'https://www.naver.com',
-        }}
-
-      />
-      <Member
-        name={'김상민'}
-        githubId={'sanggggg'}
-        position={'Android Developer'}
-        introduction={'사람에 대한 소개'}
-        links={{
-          github: 'https://www.naver.com',
-          facebook: 'https://www.naver.com',
-          web: 'https://www.naver.com',
-          instagram: 'https://www.naver.com',
-        }}
-
-      />
+      {members.map((member) => (
+        <Member
+          name={member.name}
+          githubId={member.githubId}
+          position={member.position}
+          introduction={member.introduction}
+          github={member.githubId}
+          facebook={member.facebook}
+          web={member.web}
+          instagram={member.instagram}
+        />
+      ))}
     </MembersWrapper>
   </Box>
 )

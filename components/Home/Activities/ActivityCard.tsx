@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import { Colors } from 'util/constant'
 
 interface ActivityCardProps {
-  title: String;
-  description: String;
+  title: String
+  description: String
+  src?: string
 }
 
 const CardWrapper = styled.div`
@@ -15,18 +16,19 @@ const CardWrapper = styled.div`
     margin-top: 16px;
     text-align: left;
     font-size: 20px;
-    color: ${Colors.textDark}
+    color: ${Colors.textDark};
   }
 
   h3 {
     margin-top: 10px;
     text-align: left;
     font-size: 16px;
-    color: ${Colors.textLight}
+    line-height: 20px;
+    color: ${Colors.textLight};
   }
 
   @media (max-width: 768px) {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     h2 {
       font-weight: bold;
@@ -34,27 +36,31 @@ const CardWrapper = styled.div`
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 `
 
-const CardImage = styled.div`
+const CardImage = styled.div<{ src?: string }>`
   padding-top: 56.25%;
   width: 100%;
   border-radius: 10px;
-  background: ${Colors.backDark};
+  background: center url(${({ src }) => src || '/images/icon_intro.svg'});\
+  background-size: ${({ src }) => (src ? 'cover' : 'contain')};
+  background-repeat: no-repeat;
 `
 
 const ActivityCard = (props: ActivityCardProps) => {
+  console.log(props.src)
+
   return (
     <CardWrapper>
-      <CardImage />
+      <CardImage src={props.src} />
       <h2>{props.title}</h2>
       <h3>{props.description}</h3>
     </CardWrapper>
   )
-
 }
 
 export default ActivityCard
