@@ -43,10 +43,7 @@ const Introduction = styled.p`
   font-weight: 300;
   font-size: 12px;
   line-height: 16px;
-<<<<<<< HEAD
   white-space: pre-line;
-=======
->>>>>>> 3b62b7ebb4538aa4822ea16e2df0ff9e1e611346
 
   @media (max-width: 768px) {
     margin-top: 16px;
