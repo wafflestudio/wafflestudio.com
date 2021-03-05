@@ -43,6 +43,7 @@ const Introduction = styled.p`
   font-weight: 300;
   font-size: 12px;
   line-height: 16px;
+  white-space: pre-line;
 
   @media (max-width: 768px) {
     margin-top: 16px;
@@ -98,7 +99,7 @@ const Member = ({
   return (
     <Box>
       <Description>
-        <Name>{`${name} / ${githubId}`}</Name>
+        <Name>{`${name} ${githubId ? `/ ${githubId}` : ''}`}</Name>
         <Position>{`${position}`}</Position>
         <Introduction>{`${introduction}`}</Introduction>
       </Description>
