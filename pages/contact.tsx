@@ -170,6 +170,11 @@ const ContentMain = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  img {
+    margin: 0 auto;
+    height: 259px;
+  }
 `
 
 const SubTitleContainer = styled.div`
@@ -323,12 +328,7 @@ const Contact = () => {
             subTitle="와플스튜디오의 새소식이 올라오는 인스타그램입니다"
           />
           <ContentMain>
-            <Image
-              src="/images/instagram.png"
-              alt="Instagram"
-              width="447"
-              height="259"
-            />
+            <img src="/images/instagram.png" alt="Instagram" />
             <Description>
               <SubTitleContainer>
                 <h1>
