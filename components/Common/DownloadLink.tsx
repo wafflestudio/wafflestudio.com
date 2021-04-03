@@ -9,27 +9,27 @@ const Wrapper = styled.div`
 `
 
 const MarginImage = styled(Image)`
-  margin: 8px
+  margin: 8px;
 `
 
-const DownloadLink = () => {
+const DownloadLink = ({ playStore, appStore }) => {
   return (
     <Wrapper>
-      <a
-        href='http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+      <a href={playStore}>
         <Image
-          alt='다운로드하기 Google Play'
-          src='/images/google_play_download.svg'
-          width='133px'
-          height='51px' />
+          alt="다운로드하기 Google Play"
+          src="/images/google_play_download.svg"
+          width="133px"
+          height="51px"
+        />
       </a>
-      <a
-        href='https://www.naver.com/'>
+      <a href={appStore}>
         <MarginImage
-          alt='다운로드하기 AppStore'
-          src='/images/app_store_download.svg'
-          width='112px'
-          height='35px' />
+          alt="다운로드하기 AppStore"
+          src="/images/app_store_download.svg"
+          width="112px"
+          height="35px"
+        />
       </a>
     </Wrapper>
   )

@@ -49,6 +49,7 @@ const TextPanel = styled.div`
   h2 {
     margin-right: 150px;
     font-size: 20px;
+    white-space: pre-line;
     color: ${Colors.backLight};
   }
 
@@ -56,6 +57,7 @@ const TextPanel = styled.div`
     margin-right: 150px;
     margin-top: 90px;
     font-size: 16px;
+    white-space: pre-line;
     color: ${Colors.backLight};
   }
 
@@ -84,6 +86,8 @@ interface ServiceItemProps {
   subtitle: string
   description: string
   src: string
+  playStore: string
+  appStore: string
 }
 
 const ServiceItem = ({
@@ -92,6 +96,8 @@ const ServiceItem = ({
   subtitle,
   description,
   src,
+  playStore,
+  appStore,
 }: ServiceItemProps) => {
   return (
     <Wrapper back={backgroundImage}>
@@ -102,7 +108,7 @@ const ServiceItem = ({
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
         <h3>{description}</h3>
-        <DownloadLink />
+        <DownloadLink playStore={playStore} appStore={appStore} />
       </TextPanel>
     </Wrapper>
   )
