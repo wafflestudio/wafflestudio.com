@@ -308,9 +308,15 @@ const Contact = () => {
                 </h2>
               </SubTitleContainer>
               <ButtonContainer>
-                <Link href={'https://www.naver.com'} passHref>
+                <a
+                  href={
+                    'https://m.map.naver.com/search2/site.naver?query=서울대학교%20공과대학&sm=hty&style=v5&code=18714325#/map'
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button>지도 바로가기</button>
-                </Link>
+                </a>
               </ButtonContainer>
             </Description>
             <Image

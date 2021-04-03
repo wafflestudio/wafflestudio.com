@@ -52,8 +52,6 @@ const CardImage = styled.div<{ src?: string }>`
 `
 
 const ActivityCard = (props: ActivityCardProps) => {
-  console.log(props.src)
-
   return (
     <CardWrapper>
       <CardImage src={props.src} />
