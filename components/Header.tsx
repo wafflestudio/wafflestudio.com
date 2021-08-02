@@ -155,6 +155,15 @@ const Header = () => {
               연락처
             </MenuItem>
           </Link>
+          <Link href="/recruit">
+            <MenuItem
+              onClick={() => {
+                setMenuOpen(false)
+              }}
+            >
+              지원
+            </MenuItem>
+          </Link>
         </MenuContainer>
       </HeaderContainer>
       <OverlayBox
