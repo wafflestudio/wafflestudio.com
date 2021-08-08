@@ -10,6 +10,10 @@ const CarouselWrapper = styled.div`
     background: none;
   }
 
+  .carousel.carousel-slider .control-arrow {
+    background: none !important;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     align-self: center;
