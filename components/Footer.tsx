@@ -56,8 +56,6 @@ const Footer = () => {
         <a href="mailto:master@wafflestudio.com">
           master@wafflestudio.com
         </a>{' '}
-        <br />
-        Developed by sanggggg, ars-ki-00, qrid
       </TextContainer>
       <IconContainer>
         <Image src="/images/icon_header.svg" alt="me" width="118" height="48" />
