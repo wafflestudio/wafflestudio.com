@@ -7,10 +7,28 @@ const SponsorCard = styled.div`
   width: 200px;
   height: 197px;
 
+  &:after {
+    content: '';
+    position: absolute;
+    width: 197px;
+    left: 145px;
+    top: 87px;
+    border: 1px solid #f8f5f1;
+    transform: rotate(90deg);
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     height: 70px;
     margin-bottom: 20px;
+
+    &:after {
+      content: none;
+    }
   }
 `
 
