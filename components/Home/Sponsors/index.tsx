@@ -31,21 +31,9 @@ const Sponsors = () => {
         subTitle="와플스튜디오 활동 진행에 후원해주시는 분들입니다."
       />
       <SponsorsWrapper>
-        <Sponsor
-          name="김진억"
-          description="멋진 사람에 대한 소개를 적자"
-          color={Colors.waffleLight}
-        />
-        <Sponsor
-          name="박면규"
-          description="멋진 사람에 대한 소개를 적자"
-          color={Colors.waffleDark}
-        />
-        <Sponsor
-          name="한재화"
-          description="멋진 사람에 대한 소개를 적자"
-          color={Colors.wafflePrimary}
-        />
+        <Sponsor name="김진억" color={Colors.waffleLight} />
+        <Sponsor name="박면규" color={Colors.waffleDark} />
+        <Sponsor name="한재화" color={Colors.wafflePrimary} />
       </SponsorsWrapper>
     </Wrapper>
   )
