@@ -62,6 +62,19 @@ const ServiceCarousel = ({ userAgent }) => {
           appStore="https://apps.apple.com/kr/app/snutt-서울대학교-시간표-앱/id1215668309"
           playStore="https://play.google.com/store/apps/details?id=com.wafflestudio.snutt2.live&hl=ko&gl=US"
         />
+        <ServiceItem
+          backgroundImage={
+            isMobile(userAgent || window.navigator)
+              ? '/images/snuboard_back_mobile.svg'
+              : '/images/snuboard_back.png'
+          }
+          title={'스누보드'}
+          subtitle={'서울대학교 과별 공지사항을 모아보고 알림 받자!'}
+          description={'그 동안 찾아보기 힘들었던 \n 서울대학교 우리 학과 공지사항을 \n이제 모바일에서 알림까지!'}
+          src={'/images/snuboard_mock.png'}
+          appStore="#"
+          playStore="https://play.google.com/store/apps/details?id=com.wafflestudio.snuboard&hl=ko&gl=US"
+        />
       </Carousel>
     </CarouselWrapper>
   )
