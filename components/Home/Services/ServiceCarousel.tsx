@@ -47,7 +47,7 @@ const ServiceCarousel = ({ userAgent }) => {
           }
           src={'/images/siksha_mock.png'}
           appStore="https://apps.apple.com/kr/app/식샤-서울대학교-식단-앱/id1032700617"
-          playStore="https://apps.apple.com/kr/app/식샤-서울대학교-식단-앱/id1032700617"
+          playStore="https://play.google.com/store/apps/details?id=com.wafflestudio.siksha2&hl=ko&gl=US"
         />
         <ServiceItem
           backgroundImage={
