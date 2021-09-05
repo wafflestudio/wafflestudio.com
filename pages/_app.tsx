@@ -38,6 +38,11 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-205540392-1"
+        ></script>
+        <script src="../util/gtag.js"></script>
         <link
           href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
           rel="stylesheet"
