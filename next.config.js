@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['play.google.com'],
+    domains: ['play.google.com', 'www.datocms-assets.com'],
   },
   
   webpack: config => { 
