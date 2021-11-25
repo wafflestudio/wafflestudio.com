@@ -72,7 +72,7 @@ const ServiceCarousel = ({ userAgent }) => {
           subtitle={'서울대학교 과별 공지사항을 모아보고 알림 받자!'}
           description={'그 동안 찾아보기 힘들었던 \n 서울대학교 우리 학과 공지사항을 \n이제 모바일에서 알림까지!'}
           src={'/images/snuboard_mock.png'}
-          appStore="#"
+          appStore="https://apps.apple.com/kr/app/id1585860405"
           playStore="https://play.google.com/store/apps/details?id=com.wafflestudio.snuboard&hl=ko&gl=US"
         />
       </Carousel>
