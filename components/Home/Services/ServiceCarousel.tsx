@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { isMobile } from 'util/device'
+import { useEffect, useState } from 'react'
 
 const CarouselWrapper = styled.div`
   width: 780px;
@@ -24,7 +25,12 @@ const CarouselWrapper = styled.div`
   }
 `
 
-const ServiceCarousel = ({ userAgent }) => {
+const ServiceCarousel = () => {
+  const [userAgent, setUserAgent] = useState<any>()
+
+  useEffect(() => {
+    setUserAgent(window.navigator.userAgent)
+  }, [])
   return (
     <CarouselWrapper>
       <Carousel
@@ -36,7 +42,7 @@ const ServiceCarousel = ({ userAgent }) => {
       >
         <ServiceItem
           backgroundImage={
-            isMobile(userAgent || window.navigator)
+            isMobile(userAgent)
               ? '/images/siksha_back_mobile.svg'
               : '/images/siksha_back.png'
           }
@@ -51,7 +57,7 @@ const ServiceCarousel = ({ userAgent }) => {
         />
         <ServiceItem
           backgroundImage={
-            isMobile(userAgent || window.navigator)
+            isMobile(userAgent)
               ? '/images/snutt_back_mobile.png'
               : '/images/snutt_back.svg'
           }
@@ -64,13 +70,15 @@ const ServiceCarousel = ({ userAgent }) => {
         />
         <ServiceItem
           backgroundImage={
-            isMobile(userAgent || window.navigator)
+            isMobile(userAgent)
               ? '/images/snuboard_back_mobile.svg'
               : '/images/snuboard_back.png'
           }
           title={'스누보드'}
           subtitle={'서울대학교 과별 공지사항을 모아보고 알림 받자!'}
-          description={'그 동안 찾아보기 힘들었던 \n 서울대학교 우리 학과 공지사항을 \n이제 모바일에서 알림까지!'}
+          description={
+            '그 동안 찾아보기 힘들었던 \n 서울대학교 우리 학과 공지사항을 \n이제 모바일에서 알림까지!'
+          }
           src={'/images/snuboard_mock.png'}
           appStore="https://apps.apple.com/kr/app/id1585860405"
           playStore="https://play.google.com/store/apps/details?id=com.wafflestudio.snuboard&hl=ko&gl=US"
@@ -81,11 +89,3 @@ const ServiceCarousel = ({ userAgent }) => {
 }
 
 export default ServiceCarousel
-
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      userAgent: context.req.headers['user-agent'],
-    },
-  }
-}
