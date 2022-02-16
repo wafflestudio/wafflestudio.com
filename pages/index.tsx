@@ -12,12 +12,12 @@ const HomeWrapper = styled.div`
   align-items: center;
 `
 
-const Home = ({ userAgent }) => {
+const Home = () => {
   return (
     <HomeWrapper>
       <Intro />
       <SectionDivider />
-      <Services userAgent={userAgent} />
+      <Services />
       <SectionDivider />
       <Activities />
       <SectionDivider />
@@ -29,11 +29,3 @@ const Home = ({ userAgent }) => {
 }
 
 export default Home
-
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      userAgent: context.req.headers['user-agent'],
-    },
-  }
-}
