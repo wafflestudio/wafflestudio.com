@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [master]
+    branches: [master, woohm402-patch-2]
 
 jobs:
   deploy:
@@ -31,4 +31,3 @@ jobs:
         AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
       run: |
         aws s3 sync ./out $AWS_S3_BUCKET --delete
-        aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
