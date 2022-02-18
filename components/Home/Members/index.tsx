@@ -61,6 +61,7 @@ const Members = () => {
           statusComment={member.statusComment}
           descriptions={member.descriptions}
           reverse={member.reverse}
+          key={member.status}
         />
       ))}
     </Wrapper>
