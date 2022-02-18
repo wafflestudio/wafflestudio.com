@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { createGlobalStyle } from 'styled-components'
 import { Colors } from 'util/constant'
 import { Header, Footer } from 'components'
+import '../util/gtag.js'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -42,7 +43,6 @@ function App({ Component, pageProps }: AppProps) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-205540392-1"
         ></script>
-        <script src="../util/gtag.js"></script>
         <link
           href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
           rel="stylesheet"
