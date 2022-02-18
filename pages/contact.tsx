@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 import Image from 'next/image'
 import SectionDivider from 'components/Common/SectionDivider'
 import SectionTitle from 'components/Common/SectionTitle'
@@ -208,6 +207,7 @@ const SubTitleContainer = styled.div`
 
 const ButtonContainer = styled.div`
   button {
+    cursor: pointer;
     margin-top: 16px;
     width: 254px;
     height: 56px;

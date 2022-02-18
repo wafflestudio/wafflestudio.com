@@ -12,6 +12,13 @@ const Wrapper = styled.div`
     width: 90%;
   }
 `
+
+const Caption = styled.b`
+  font-size: 12px;
+  color: #888;
+  margin: 16px;
+`
+
 const members = [
   {
     reverse: false,
@@ -32,7 +39,7 @@ const members = [
     statusComment: '준비가 끝나고 서비스 개발을 진행하는 인원',
     descriptions: [
       '아이디어 기획부터 개발까지, 팀을 구성하여 자율적으로 진행합니다.',
-      '3월 중 모집',
+      '1월 중 모집',
     ],
   },
   {
@@ -42,7 +49,7 @@ const members = [
     statusComment: '서비스의 디자인은 우리가 책임진다!',
     descriptions: [
       '프로젝트 뿐만 아니라, 와플 스튜디오의 굿즈까지 디자인을 담당합니다.',
-      '상시 모집',
+      '1월 중 모집',
     ],
   },
 ]
@@ -61,8 +68,13 @@ const Members = () => {
           statusComment={member.statusComment}
           descriptions={member.descriptions}
           reverse={member.reverse}
+          key={member.status}
         />
       ))}
+      <Caption>
+        * Programmers / Designers 의 경우 모집 기간이 아니지만 지원 의향이
+        있으시다면 recruit@wafflestudio.com 으로 문의 부탁드립니다.
+      </Caption>
     </Wrapper>
   )
 }
