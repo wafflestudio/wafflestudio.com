@@ -55,9 +55,6 @@ const Footer = () => {
         서울대학교 공과대학 301-314 <br />
         <a href="mailto:master@wafflestudio.com">
           master@wafflestudio.com
-        </a>{' '} <br/><br />
-        <a href="https://vercel.com?utm_source=[team-name]&utm_campaign=oss" target="_blank">
-          <Image src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" width={120} height={30} />
         </a>
       </TextContainer>
       <IconContainer>
