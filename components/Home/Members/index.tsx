@@ -12,6 +12,13 @@ const Wrapper = styled.div`
     width: 90%;
   }
 `
+
+const Caption = styled.b`
+  font-size: 12px;
+  color: #888;
+  margin: 16px;
+`
+
 const members = [
   {
     reverse: false,
@@ -64,6 +71,10 @@ const Members = () => {
           key={member.status}
         />
       ))}
+      <Caption>
+        * Programmers / Designers 의 경우 모집 기간이 아니지만 지원 의향이
+        있으시다면 recruit@wafflestudio.com 으로 문의 부탁드립니다.
+      </Caption>
     </Wrapper>
   )
 }
