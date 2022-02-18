@@ -208,6 +208,7 @@ const SubTitleContainer = styled.div`
 
 const ButtonContainer = styled.div`
   button {
+    cursor: pointer;
     margin-top: 16px;
     width: 254px;
     height: 56px;
