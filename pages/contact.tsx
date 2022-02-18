@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 import Image from 'next/image'
 import SectionDivider from 'components/Common/SectionDivider'
 import SectionTitle from 'components/Common/SectionTitle'
