@@ -4,7 +4,9 @@ module.exports = {
     path: '/',
     domains: ['play.google.com', 'www.datocms-assets.com'],
   },
-  
+
+  trailingSlash: true,
+
   webpack: config => { 
     config.module.rules.push( 
       { 
