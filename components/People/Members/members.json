@@ -56,5 +56,6 @@
   {"name":"최종현","githubId":"jonghyunchoe","position":"Server Developer","introduction":"데이터베이스, AI, 퀀트에 관심이 많은 학부생입니다. ","instagram":"andy.choe.729","facebook":"andy.choe.184","web":"https://www.linkedin.com/in/andy-choe-b90b18144/"},
   {"name":"최준호","githubId":"whiteruby02","position":"Server Developer","introduction":"안녕하세요 경영학과 최준호입니다!","instagram":"jooooooon_ho","facebook":"","web":""},
   {"name":"최형욱","githubId":"GoGiants1","position":"Frontend Developer","introduction":"리액트, 플러터로 서비스 만들어보고 싶어요!","instagram":"woogie.97","facebook":"","web":""},
-  {"name":"함태원","githubId":"ZyeLK","position":"Frontend Developer","introduction":"활동분야: HTML, 리액트, C, 스크래치, 마인크래프트 레드스톤","instagram":"zz_zye","facebook":"","web":""}
+  {"name":"함태원","githubId":"ZyeLK","position":"Frontend Developer","introduction":"활동분야: HTML, 리액트, C, 스크래치, 마인크래프트 레드스톤","instagram":"zz_zye","facebook":"","web":""},
+  {"name":"문보현","githubId":"moonpiderman","position":"Backend Developer","introduction":"시련은 있어도 실패는 없는거야","instagram":"moonhulk","facebook":"","web":""}
 ]
