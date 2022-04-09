@@ -20,6 +20,7 @@
   {"name":"김승효","githubId":"Wits15730","position":"Frontend Developer","introduction":"열린책들 세계문학 시리즈를 좋아한다. 인류가 어떻게 하면 정보 사회에서 살아남을 수 있는지 고민하고 있다. 그래서 요즘은 인공지능 기술에 관해 공부하고 있다. 일을 체계적으로 관리하는 것을 매우 좋아한다. 코딩도 좋아하지만 서비스의 전체적인 플로우를 설계하는 데에도 관심이 많다. 애석하지만 와플은 별로 좋아하지 않는다.","instagram":"davidkim2316","facebook":"davidkim15730","web":""},
   {"name":"김유진","githubId":"yuzzznk","position":"Frontend Developer","introduction":"제 인스타그램 아이디는 점대칭이에요!","instagram":"yuzzznh","facebook":"","web":""},
   {"name":"김진욱","githubId":"jusjinuk","position":"Android Developer","introduction":"생크림 초코와플과 리얼딸기라떼를 좋아하는 개발자입니다.","instagram":"","facebook":"","web":""},
+  {"name":"김찬협","githubId":"ChanHyup98","position":"Server Developer","introduction":"한상현이 추가함 / 아르고 서버 개발자 (물류왕 김찬협)","instagram":"","facebook":"","web":""},
   {"name":"김홍균","githubId":"keepRainy","position":"Server Developer Developer","introduction":"인생즐겜러","instagram":"","facebook":"","web":""},
   {"name":"남우성","githubId":"gitiss","position":"Frontend Developer","introduction":"정문 앞에서 꼭대기까지 올라온 신예 와플 파티셰","instagram":"","facebook":"","web":""},
   {"name":"문서윤","githubId":"symoon9","position":"Server Developer","introduction":"아직 병아리 단계지만... 열심히 하겠습니다","instagram":"","facebook":"","web":""},
@@ -57,5 +58,6 @@
   {"name":"최종현","githubId":"jonghyunchoe","position":"Server Developer","introduction":"데이터베이스, AI, 퀀트에 관심이 많은 학부생입니다. ","instagram":"andy.choe.729","facebook":"andy.choe.184","web":"https://www.linkedin.com/in/andy-choe-b90b18144/"},
   {"name":"최준호","githubId":"whiteruby02","position":"Server Developer","introduction":"안녕하세요 경영학과 최준호입니다!","instagram":"jooooooon_ho","facebook":"","web":""},
   {"name":"최형욱","githubId":"GoGiants1","position":"Frontend Developer","introduction":"리액트, 플러터로 서비스 만들어보고 싶어요!","instagram":"woogie.97","facebook":"","web":""},
+  {"name":"한상현","githubId":"Ethan-MoBeau","position":"iOS Developer","introduction":"졸업을 언제 할 수 있을지 암담한 두나무 iOS 개발자입니다", "instagram":"mobeau_sh","facebook":"MoBeauSH","web":""},
   {"name":"함태원","githubId":"ZyeLK","position":"Frontend Developer","introduction":"활동분야: HTML, 리액트, C, 스크래치, 마인크래프트 레드스톤","instagram":"zz_zye","facebook":"","web":""}
 ]
