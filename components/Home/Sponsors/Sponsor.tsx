@@ -11,7 +11,7 @@ const SponsorCard = styled.div`
     content: '';
     position: absolute;
     width: 197px;
-    left: 145px;
+    left: 98px;
     top: 87px;
     border: 1px solid #f8f5f1;
     transform: rotate(90deg);
