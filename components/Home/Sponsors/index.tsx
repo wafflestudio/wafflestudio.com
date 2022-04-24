@@ -34,6 +34,7 @@ const Sponsors = () => {
         <Sponsor name="김진억" color={Colors.waffleLight} />
         <Sponsor name="박면규" color={Colors.waffleDark} />
         <Sponsor name="한재화" color={Colors.wafflePrimary} />
+        <Sponsor name="이승찬" color={Colors.waffleSecondary} />
       </SponsorsWrapper>
     </Wrapper>
   )
