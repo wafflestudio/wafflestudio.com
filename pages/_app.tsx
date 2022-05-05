@@ -49,6 +49,10 @@ function App({ Component, pageProps }: AppProps) {
           type="text/css"
         />
         <title>와플스튜디오</title>
+        <meta
+          name="description"
+          content="여기는 서울대학교 컴퓨터공학부 웹/앱 개발 동아리 와플스튜디오입니다."
+        />
       </Head>
       <GlobalStyle />
       <Header />
