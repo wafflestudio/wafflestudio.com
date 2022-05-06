@@ -48,6 +48,16 @@ function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
           type="text/css"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wafflestudio.com" />
+        <meta
+          property="og:image"
+          content="https://wafflestudio.com/images/og-image.png"
+        />
+        <meta property="og:site_name" content="와플스튜디오" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <title>와플스튜디오</title>
       </Head>
       <GlobalStyle />
