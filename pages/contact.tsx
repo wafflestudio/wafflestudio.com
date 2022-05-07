@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import SectionDivider from 'components/Common/SectionDivider'
 import SectionTitle from 'components/Common/SectionTitle'
+import Head from 'next/head'
 
 const TitleContainer = styled.section`
   display: flex;
@@ -268,6 +269,13 @@ const Content = styled.div<{ text: string; color: string }>`
 const Contact = () => {
   return (
     <>
+      <Head>
+        <meta property="og:title" content="와플스튜디오 연락처" />
+        <meta
+          property="og:description"
+          content="와플스튜디오와 함께하실 분들을 찾습니다."
+        />
+      </Head>
       <TitleContainer>
         <Address>
           <p className="left">MASTER@WAFFLESTUDIO.COM</p>
