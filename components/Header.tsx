@@ -68,7 +68,7 @@ const MenuContainer = styled.div<{ menuOpen: boolean }>`
   }
 `
 
-const MenuItem = styled.div`
+const MenuItem = styled.a`
   display: flex;
   margin-left: 40px;
   justify-content: center;
@@ -76,6 +76,7 @@ const MenuItem = styled.div`
   font-size: 20px;
   transition: color 0.2s ease;
   color: ${Colors.textLight};
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;
@@ -128,7 +129,7 @@ const Header = () => {
           </MenuIcon>
         </IconContainer>
         <MenuContainer menuOpen={menuOpen}>
-          <Link href="/">
+          <Link href="/" passHref>
             <MenuItem
               onClick={() => {
                 setMenuOpen(false)
@@ -137,7 +138,7 @@ const Header = () => {
               소개
             </MenuItem>
           </Link>
-          <Link href="/people">
+          <Link href="/people" passHref>
             <MenuItem
               onClick={() => {
                 setMenuOpen(false)
@@ -146,7 +147,7 @@ const Header = () => {
               멤버
             </MenuItem>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact" passHref>
             <MenuItem
               onClick={() => {
                 setMenuOpen(false)
@@ -155,15 +156,15 @@ const Header = () => {
               연락처
             </MenuItem>
           </Link>
-          {/* <Link href="/recruit">
-            <MenuItem
-              onClick={() => {
-                setMenuOpen(false)
-              }}
-            >
-              지원
-            </MenuItem>
-          </Link> */}
+          <MenuItem
+            href="https://github.com/wafflestudio/waffle-recruit"
+            target="_blank"
+            onClick={() => {
+              setMenuOpen(false)
+            }}
+          >
+            지원
+          </MenuItem>
         </MenuContainer>
       </HeaderContainer>
       <OverlayBox
