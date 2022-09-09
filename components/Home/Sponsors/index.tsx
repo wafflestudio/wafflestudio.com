@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import SectionTitle from 'components/Common/SectionTitle'
 import Sponsor from './Sponsor'
 import { Colors } from 'util/constant'
+import Image from 'next/image'
 
 const Wrapper = styled.section`
   width: 780px;
@@ -38,6 +39,14 @@ const peoples = [
   { color: Colors.waffleSecondary, name: '이승찬' },
 ]
 
+const companies = [
+  {
+    image: '/images/tada_logo.png',
+    name: 'vcnc',
+    link: 'https://tadatada.com/',
+  },
+]
+
 const Sponsors = () => {
   return (
     <Wrapper>
@@ -49,6 +58,14 @@ const Sponsors = () => {
         {peoples.map(({ color, name }, i) => (
           <StyledSponsorCard key={`people_${i}`}>
             <Sponsor.Rectangle color={color} />
+            <Sponsor.Name>{name}</Sponsor.Name>
+          </StyledSponsorCard>
+        ))}
+        {companies.map(({ image, name, link }, i) => (
+          <StyledSponsorCard key={`company_${i}`}>
+            <Sponsor.Rectangle as="a" href={link} target="_blank">
+              <Image src={image} layout="fill" />
+            </Sponsor.Rectangle>
             <Sponsor.Name>{name}</Sponsor.Name>
           </StyledSponsorCard>
         ))}
