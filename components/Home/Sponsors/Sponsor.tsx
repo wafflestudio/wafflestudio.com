@@ -1,48 +1,38 @@
+import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
 import { Colors } from 'util/constant'
 
-const SponsorCard = styled.div`
+const Wrapper = styled.div`
   position: relative;
   width: 200px;
   height: 197px;
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 197px;
-    left: 98px;
-    top: 87px;
-    border: 1px solid #f8f5f1;
-    transform: rotate(90deg);
-  }
+  border-right: 2px solid #f8f5f1;
 
-  &:last-child:after {
-    content: none;
+  &:last-of-type {
+    border: none;
   }
 
   @media (max-width: 768px) {
     width: 100%;
     height: 70px;
     margin-bottom: 20px;
-
-    &:after {
-      content: none;
-    }
+    border: none;
   }
 `
 
-const Rectangle = styled.div<{ color: string }>`
+const Rectangle = styled.div<{ color?: string }>`
   position: absolute;
-  left: 35%;
-  right: 35%;
-  top: 0%;
-  bottom: 69.54%;
+  top: 5%;
+  left: calc(50% - 30px);
+  display: block;
 
   width: 60px;
   height: 60px;
   border-radius: 15px;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color = '#ffffff' }) => color};
+  overflow: hidden;
 
   font-family: Spoqa Han Sans Neo;
   font-style: normal;
@@ -56,9 +46,9 @@ const Rectangle = styled.div<{ color: string }>`
 
 const Name = styled.h3`
   position: absolute;
-  left: 20.5%;
+  left: 21%;
   right: 21%;
-  top: 44.67%;
+  top: 50%;
   bottom: 43.15%;
 
   color: ${Colors.textDark};
@@ -78,7 +68,7 @@ const Description = styled.p`
   position: absolute;
   left: 0%;
   right: 0%;
-  top: 71.07%;
+  top: 76%;
   bottom: 0%;
 
   font-size: 16px;
@@ -94,19 +84,15 @@ const Description = styled.p`
 `
 
 interface Props {
-  name: string
-  description?: string
-  color: string
+  className?: string
 }
 
-const Sponsor = ({ name, color, description }: Props) => {
-  return (
-    <SponsorCard>
-      <Rectangle color={color} />
-      <Name>{name}</Name>
-      <Description>{description}</Description>
-    </SponsorCard>
-  )
+const Sponsor = ({ className, children }: PropsWithChildren<Props>) => {
+  return <Wrapper className={className}>{children}</Wrapper>
 }
+
+Sponsor.Rectangle = Rectangle
+Sponsor.Name = Name
+Sponsor.Description = Description
 
 export default Sponsor
