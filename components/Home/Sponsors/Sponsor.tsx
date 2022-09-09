@@ -22,15 +22,17 @@ const Wrapper = styled.div`
   }
 `
 
-const Rectangle = styled.div<{ color: string }>`
+const Rectangle = styled.div<{ color?: string }>`
   position: absolute;
   top: 5%;
   left: calc(50% - 30px);
+  display: block;
 
   width: 60px;
   height: 60px;
   border-radius: 15px;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color = '#ffffff' }) => color};
+  overflow: hidden;
 
   font-family: Spoqa Han Sans Neo;
   font-style: normal;
