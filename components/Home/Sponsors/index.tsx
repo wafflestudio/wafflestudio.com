@@ -38,8 +38,8 @@ const Sponsors = () => {
         subTitle="와플스튜디오 활동 진행에 후원해주시는 분들입니다."
       />
       <SponsorsWrapper>
-        {peoples.map(({ color, name }) => (
-          <Sponsor>
+        {peoples.map(({ color, name }, i) => (
+          <Sponsor key={`people_${i}`}>
             <Sponsor.Rectangle color={color} />
             <Sponsor.Name>{name}</Sponsor.Name>
           </Sponsor>
