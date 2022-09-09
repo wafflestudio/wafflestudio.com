@@ -1,8 +1,9 @@
+import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
 import { Colors } from 'util/constant'
 
-const SponsorCard = styled.div`
+const Wrapper = styled.div`
   position: relative;
   width: 200px;
   height: 197px;
@@ -94,19 +95,15 @@ const Description = styled.p`
 `
 
 interface Props {
-  name: string
-  description?: string
-  color: string
+  className?: string
 }
 
-const Sponsor = ({ name, color, description }: Props) => {
-  return (
-    <SponsorCard>
-      <Rectangle color={color} />
-      <Name>{name}</Name>
-      <Description>{description}</Description>
-    </SponsorCard>
-  )
+const Sponsor = ({ className, children }: PropsWithChildren<Props>) => {
+  return <Wrapper className={className}>{children}</Wrapper>
 }
+
+Sponsor.Rectangle = Rectangle
+Sponsor.Name = Name
+Sponsor.Description = Description
 
 export default Sponsor

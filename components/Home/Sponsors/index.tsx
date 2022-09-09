@@ -23,6 +23,13 @@ const SponsorsWrapper = styled.div`
   }
 `
 
+const peoples = [
+  { color: Colors.waffleLight, name: '김진억' },
+  { color: Colors.waffleDark, name: '박면규' },
+  { color: Colors.wafflePrimary, name: '한재화' },
+  { color: Colors.waffleSecondary, name: '이승찬' },
+]
+
 const Sponsors = () => {
   return (
     <Wrapper>
@@ -31,10 +38,12 @@ const Sponsors = () => {
         subTitle="와플스튜디오 활동 진행에 후원해주시는 분들입니다."
       />
       <SponsorsWrapper>
-        <Sponsor name="김진억" color={Colors.waffleLight} />
-        <Sponsor name="박면규" color={Colors.waffleDark} />
-        <Sponsor name="한재화" color={Colors.wafflePrimary} />
-        <Sponsor name="이승찬" color={Colors.waffleSecondary} />
+        {peoples.map(({ color, name }) => (
+          <Sponsor>
+            <Sponsor.Rectangle color={color} />
+            <Sponsor.Name>{name}</Sponsor.Name>
+          </Sponsor>
+        ))}
       </SponsorsWrapper>
     </Wrapper>
   )
