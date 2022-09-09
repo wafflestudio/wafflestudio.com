@@ -13,13 +13,21 @@ const Wrapper = styled.section`
 `
 
 const SponsorsWrapper = styled.div`
-  margin-top: 87px;
+  margin-top: 67px;
   display: flex;
   justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-direction: column;
     margin-top: 39px;
+  }
+`
+
+const StyledSponsorCard = styled(Sponsor)`
+  flex: 1;
+
+  @media (max-width: 768px) {
+    flex: auto;
   }
 `
 
@@ -38,11 +46,11 @@ const Sponsors = () => {
         subTitle="와플스튜디오 활동 진행에 후원해주시는 분들입니다."
       />
       <SponsorsWrapper>
-        {peoples.map(({ color, name }) => (
-          <Sponsor>
+        {peoples.map(({ color, name }, i) => (
+          <StyledSponsorCard key={`people_${i}`}>
             <Sponsor.Rectangle color={color} />
             <Sponsor.Name>{name}</Sponsor.Name>
-          </Sponsor>
+          </StyledSponsorCard>
         ))}
       </SponsorsWrapper>
     </Wrapper>
