@@ -13,13 +13,21 @@ const Wrapper = styled.section`
 `
 
 const SponsorsWrapper = styled.div`
-  margin-top: 87px;
+  margin-top: 67px;
   display: flex;
   justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-direction: column;
     margin-top: 39px;
+  }
+`
+
+const StyledSponsorCard = styled(Sponsor)`
+  flex: 1;
+
+  @media (max-width: 768px) {
+    flex: auto;
   }
 `
 
@@ -39,10 +47,10 @@ const Sponsors = () => {
       />
       <SponsorsWrapper>
         {peoples.map(({ color, name }, i) => (
-          <Sponsor key={`people_${i}`}>
+          <StyledSponsorCard key={`people_${i}`}>
             <Sponsor.Rectangle color={color} />
             <Sponsor.Name>{name}</Sponsor.Name>
-          </Sponsor>
+          </StyledSponsorCard>
         ))}
       </SponsorsWrapper>
     </Wrapper>
