@@ -49,9 +49,7 @@ const Members = () => (
     />
     <MembersWrapper>
       {members
-        .filter((m) => {
-          return m['op']
-        })
+        .filter((m) => m['op'])
         .map((member) => (
           <Member
             name={member.name}
@@ -72,9 +70,7 @@ const Members = () => (
     />
     <MembersWrapper>
       {members
-        .filter((m) => {
-          return !m['op']
-        })
+        .filter((m) => !m['op'])
         .map((member) => (
           <Member
             name={member.name}
