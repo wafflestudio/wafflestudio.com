@@ -58,7 +58,6 @@ const Members = () => (
           facebook={member.facebook}
           web={member.web}
           instagram={member.instagram}
-          op={member.op}
         />
       ))}
     </MembersWrapper>
@@ -78,7 +77,6 @@ const Members = () => (
           facebook={member.facebook}
           web={member.web}
           instagram={member.instagram}
-          op={member.op}
         />
       ))}
     </MembersWrapper>
