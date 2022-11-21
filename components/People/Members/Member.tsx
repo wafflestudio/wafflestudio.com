@@ -6,7 +6,7 @@ const Box = styled.article`
   width: 100%;
   height: 270px;
   border-radius: 12px;
-  background-color: #f8f5f1;
+  background-color: ${props => (props.op ? "#f8f5f1" : "#f8f5f1")};
   overflow: auto;
 `
 
@@ -71,7 +71,7 @@ const Links = styled.div`
 const LinkItem = styled.a`
   margin: 0 6px;
 
-  @media (max-wjidth: 768px) {
+  @media (max-width: 768px) {
     margin: 0;
   }
 `
@@ -85,6 +85,7 @@ interface Props {
   facebook?: string
   github?: string
   web?: string
+  op: boolean
 }
 
 const Member = ({
@@ -95,9 +96,10 @@ const Member = ({
   instagram,
   facebook,
   web,
+  op
 }: Props) => {
   return (
-    <Box>
+    <Box op={op}>
       <Description>
         <Name>{`${name} ${githubId ? `/ ${githubId}` : ''}`}</Name>
         <Position>{`${position}`}</Position>
