@@ -94,7 +94,7 @@ const Member = ({
   introduction,
   instagram,
   facebook,
-  web
+  web,
 }: Props) => {
   return (
     <Box>

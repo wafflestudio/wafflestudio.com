@@ -48,18 +48,22 @@ const Members = () => (
       subTitle="와플스튜디오 22-23 운영팀입니다."
     />
     <MembersWrapper>
-      {members.filter((m)=>{return m['op']}).map((member) => (
-        <Member
-          name={member.name}
-          githubId={member.githubId}
-          position={member.position}
-          introduction={member.introduction}
-          github={member.githubId}
-          facebook={member.facebook}
-          web={member.web}
-          instagram={member.instagram}
-        />
-      ))}
+      {members
+        .filter((m) => {
+          return m['op']
+        })
+        .map((member) => (
+          <Member
+            name={member.name}
+            githubId={member.githubId}
+            position={member.position}
+            introduction={member.introduction}
+            github={member.githubId}
+            facebook={member.facebook}
+            web={member.web}
+            instagram={member.instagram}
+          />
+        ))}
     </MembersWrapper>
     <SectionDivider></SectionDivider>
     <SectionTitle
@@ -67,18 +71,22 @@ const Members = () => (
       subTitle="와플스튜디오의 전 / 현 구성원 입니다."
     />
     <MembersWrapper>
-      {members.filter((m)=>{return !m['op']}).map((member) => (
-        <Member
-          name={member.name}
-          githubId={member.githubId}
-          position={member.position}
-          introduction={member.introduction}
-          github={member.githubId}
-          facebook={member.facebook}
-          web={member.web}
-          instagram={member.instagram}
-        />
-      ))}
+      {members
+        .filter((m) => {
+          return !m['op']
+        })
+        .map((member) => (
+          <Member
+            name={member.name}
+            githubId={member.githubId}
+            position={member.position}
+            introduction={member.introduction}
+            github={member.githubId}
+            facebook={member.facebook}
+            web={member.web}
+            instagram={member.instagram}
+          />
+        ))}
     </MembersWrapper>
   </Box>
 )
