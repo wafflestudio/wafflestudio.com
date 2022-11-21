@@ -45,7 +45,7 @@ const Members = () => (
   <Box>
     <SectionTitle
       title="와플스튜디오 운영팀"
-      subTitle="와플스튜디오 21-22 운영팀입니다."
+      subTitle="와플스튜디오 22-23 운영팀입니다."
     />
     <MembersWrapper>
       {members.filter((m)=>{return m['op']}).map((member) => (
