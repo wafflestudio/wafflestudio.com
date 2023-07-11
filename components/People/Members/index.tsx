@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import SectionTitle from 'components/Common/SectionTitle'
 
 import members from './members.json'
+import SectionDivider from '../../Common/SectionDivider'
 
 const Box = styled.section`
   width: 780px;
@@ -43,22 +44,45 @@ const MembersWrapper = styled.div`
 const Members = () => (
   <Box>
     <SectionTitle
+      title="와플스튜디오 운영팀"
+      subTitle="와플스튜디오 22-23 운영팀입니다."
+    />
+    <MembersWrapper>
+      {members
+        .filter((m) => m['op'])
+        .map((member) => (
+          <Member
+            name={member.name}
+            githubId={member.githubId}
+            position={member.position}
+            introduction={member.introduction}
+            github={member.githubId}
+            facebook={member.facebook}
+            web={member.web}
+            instagram={member.instagram}
+          />
+        ))}
+    </MembersWrapper>
+    <SectionDivider></SectionDivider>
+    <SectionTitle
       title="와플스튜디오 구성원"
       subTitle="와플스튜디오의 전 / 현 구성원 입니다."
     />
     <MembersWrapper>
-      {members.map((member) => (
-        <Member
-          name={member.name}
-          githubId={member.githubId}
-          position={member.position}
-          introduction={member.introduction}
-          github={member.githubId}
-          facebook={member.facebook}
-          web={member.web}
-          instagram={member.instagram}
-        />
-      ))}
+      {members
+        .filter((m) => !m['op'])
+        .map((member) => (
+          <Member
+            name={member.name}
+            githubId={member.githubId}
+            position={member.position}
+            introduction={member.introduction}
+            github={member.githubId}
+            facebook={member.facebook}
+            web={member.web}
+            instagram={member.instagram}
+          />
+        ))}
     </MembersWrapper>
   </Box>
 )

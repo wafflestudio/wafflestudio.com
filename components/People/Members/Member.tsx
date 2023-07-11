@@ -54,7 +54,7 @@ const Links = styled.div`
   position: absolute;
   right: 9px;
   bottom: 11px;
-  background-color: #f8f5f1;
+  //background-color: #f8f5f1;
 
   @media (max-width: 768px) {
     positin: absolute;
@@ -71,7 +71,7 @@ const Links = styled.div`
 const LinkItem = styled.a`
   margin: 0 6px;
 
-  @media (max-wjidth: 768px) {
+  @media (max-width: 768px) {
     margin: 0;
   }
 `
