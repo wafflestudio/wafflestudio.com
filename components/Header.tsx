@@ -157,7 +157,7 @@ const Header = () => {
             </MenuItem>
           </Link>
           <MenuItem
-            href="https://github.com/wafflestudio/waffle-recruit"
+            href="https://wacruit.wafflestudio.com/"
             target="_blank"
             onClick={() => {
               setMenuOpen(false)
